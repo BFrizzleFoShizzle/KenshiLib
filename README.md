@@ -24,6 +24,8 @@ If you are exporting functions for other plugins to use, it is wise to make your
 
 Requires Visual Studio 2019 or newer and the Visual C++ 2010 x64 compilers. KenshiLib MUST be compiled using the Visual Studio 2010 compiler. Copies of Visual Studio 2010 can be found on the [Wayback Machine](https://archive.org/search?query=visual+studio+2010).
 
+You may also require the VS2010 SP1 update (also available above).
+
 ![Image](https://github.com/user-attachments/assets/fd4db477-d0dc-4449-99c9-8b343c95a5a1)
 
 Also requires [boost 1.60.0](https://www.boost.org/releases/1.60.0/) and the `multihook` version of [MinHook](https://github.com/m417z/minhook/tree/multihook).
