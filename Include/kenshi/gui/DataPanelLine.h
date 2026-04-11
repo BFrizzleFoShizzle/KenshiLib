@@ -347,3 +347,29 @@ public:
     // no_addr class DataPanelLine_DropBox & operator=(const class DataPanelLine_DropBox & _a1);// public missing arg names
     // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };
+
+class DataPanelLine_KeyConfig : public DataPanelLine
+{
+public:
+    // DataPanelLine offset = 0x0, length = 0x120
+    // no_addr void DataPanelLine_KeyConfig(const class DataPanelLine_KeyConfig & _a1);// public missing arg names
+    DataPanelLine_KeyConfig(const std::string& cmd, const std::string& text, int cat);// public RVA = 0x3E7740
+    DataPanelLine_KeyConfig* _CONSTRUCTOR(const std::string& cmd, const std::string& text, int cat);// public RVA = 0x3E7740
+    const std::string& getCommand();// public RVA = 0x3E6B60
+    int oldKey();// public RVA = 0x3E71B0
+    void setKey(const std::string& s);// public RVA = 0x3EF2F0
+    void eraseKey(const std::string& key);// public RVA = 0x3E6B70
+    virtual void refresh() override;// public RVA = 0x3E7420 vtable offset = 0x0
+    void _NV_refresh();// public RVA = 0x3E7420 vtable offset = 0x0
+    void cancel();// public RVA = 0x3EE140
+    virtual void createMe(DatapanelGUI* p, float vpos, bool lastLine) override;// protected RVA = 0x3EF3D0 vtable offset = 0x0
+    void _NV_createMe(DatapanelGUI* p, float vpos, bool lastLine);// protected RVA = 0x3EF3D0 vtable offset = 0x0
+    void clickButton(MyGUI::Widget* _sender);// protected RVA = 0x3EE1D0
+    MyGUI::Button* btn0; // 0x120 Member
+    MyGUI::Button* btn1; // 0x128 Member
+    std::string command; // 0x130 Member
+    virtual ~DataPanelLine_KeyConfig();// public RVA = 0x402F20 vtable offset = 0x0
+    void _DESTRUCTOR();// public RVA = 0x402F20 vtable offset = 0x0
+    // no_addr class DataPanelLine_KeyConfig & operator=(const class DataPanelLine_KeyConfig & _a1);// public missing arg names
+    // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
+};

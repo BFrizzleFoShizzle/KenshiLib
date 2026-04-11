@@ -371,6 +371,7 @@
     <ClInclude Include="Include\kenshi\ShopTrader.h" />
     <ClInclude Include="Include\kenshi\ShopTraderInventory.h" />
     <ClInclude Include="Include\kenshi\Tasker.h" />
+    <ClInclude Include="Include\kenshi\Terrain.h" />
     <ClInclude Include="Include\kenshi\Town.h" />
     <ClInclude Include="Include\kenshi\TradeCulture.h" />
     <ClInclude Include="Include\kenshi\ThreadClass.h" />
