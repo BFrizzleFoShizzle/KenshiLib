@@ -14,13 +14,15 @@ std::stringstream debugLog;
 std::ofstream debugFile("RE_Kenshi_log.txt");
 clock_t startTime = -1;
 
-static std::string GetModuleName(void* address)
+std::string GetModuleName(void* address)
 {
 	// extract DLL name of caller without extension
 	HMODULE module;
-	GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS, (LPCSTR)address, &module);
+	if (!GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS, (LPCSTR)address, &module))
+		return "ERROR";
 	char modulePath[_MAX_PATH];
-	GetModuleFileNameA(module, modulePath, sizeof(modulePath));
+	if(GetModuleFileNameA(module, modulePath, sizeof(modulePath)) == 0)
+		return "ERROR";
 	char* moduleFileName = PathFindFileNameA(modulePath);
 	PathRemoveExtensionA(moduleFileName);
 	return moduleFileName;
@@ -40,6 +42,11 @@ static void DebugLog(const std::string& moduleFileName, const std::string& messa
 	// TODO disable?
 	debugFile << timeStr << " " << moduleFileName << ": " << message << std::endl;
 	debugLog << timeStr << " " << moduleFileName << ": " << message << std::endl;
+}
+
+void DebugLog(const std::wstring& message)
+{
+	DebugLog(GetModuleName(_ReturnAddress()), std::string(message.begin(), message.end()));
 }
 
 void DebugLog(const std::string& message)
@@ -65,6 +72,11 @@ static void ErrorLog(const std::string& moduleFileName, const std::string& messa
 
 	debugFile << "Error " << timeStr << " " << moduleFileName << ": " << message << std::endl << std::flush;
 	debugLog << "Error " << timeStr << " " << moduleFileName << ": " << message << std::endl;
+}
+
+void ErrorLog(const std::wstring& message)
+{
+	ErrorLog(GetModuleName(_ReturnAddress()), std::string(message.begin(), message.end()));
 }
 
 void ErrorLog(const std::string& message)

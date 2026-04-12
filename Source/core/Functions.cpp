@@ -7,6 +7,8 @@
 
 #include <MinHook.h>
 #include <boost/atomic.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/format.hpp>
 
 /* Here's how all this black magic fuckery works
 * functions.asm declares an array of pointers to the game's functions
@@ -58,7 +60,7 @@ bool KenshiLib::InitRVAs()
     if (end != (FULL_BUFF_LENGTH * sizeof(int)))
     {
         ErrorLog("RVA file has wrong length!");
-        assert_release(end == (FULL_BUFF_LENGTH * sizeof(int)));
+        assert_release(end == (FULL_BUFF_LENGTH * sizeof(int)), L"RVA file has wrong length!\nCheck the files in \"RE_Kenshi\\RVAs\" match your KenshiLib version.");
         return false;
     }
     rvaFile.seekg(0);
@@ -108,6 +110,39 @@ static inline uintptr_t GetFunctionSlot(void* ptr)
 
 intptr_t KenshiLib::GetRealAddress(void* fun)
 {
-	assert_release((uintptr_t&)fun >= (uintptr_t)&FUNC_BEGIN && (uintptr_t&)fun <= (uintptr_t)&FUNC_END);
+    if (!((uintptr_t&)fun >= (uintptr_t)&FUNC_BEGIN && (uintptr_t&)fun <= (uintptr_t)&FUNC_END))
+    {
+        std::string moduleName = GetModuleName(fun) + ".dll";
+        uintptr_t moduleBase = (uintptr_t)GetModuleHandleA(moduleName.c_str());
+        uintptr_t offset = ((uintptr_t)fun) - moduleBase;
+        // whitelisted modules - call is unnecessary but crashing here is annoying
+        if (boost::iequals(moduleName, "Kenshi_x64.exe.dll") || boost::iequals(moduleName, "Kenshi_GOG_x64.exe.dll")
+            || boost::iequals(moduleName, "OgreMain_x64.dll") || boost::iequals(moduleName, "OgreMain_x64.dll") || boost::iequals(moduleName, "MyGUIEngine_x64.dll")
+            || boost::iequals(moduleName, "OIS64.dll") || boost::iequals(moduleName, "RenderSystem_Direct3D11_x64.dll") || boost::iequals(moduleName, "Plugin_Terrain_x64.dll")
+            || boost::iequals(moduleName, "Plugin_ParticleUniverse_x64.dll") || boost::iequals(moduleName, "Plugin_OctreeSceneManager_x64.dll")
+            || boost::iequals(moduleName, "NxCharacter.dll") || boost::iequals(moduleName, "PropertyGrid.dll") || boost::iequals(moduleName, "SkyX_x64.dll")
+            || boost::iequals(moduleName, "D3DCompiler_43.dll") || boost::iequals(moduleName, "D3Dx11_43.dll") || boost::iequals(moduleName, "D3D11.dll"))
+        {
+            // unnecessary call
+            ErrorLog("Unnecessary call to KenshiLib::GetRealAddress() from " + GetModuleName(_ReturnAddress()) + " for " + moduleName + (boost::format("+0x%x") % 1234).str());
+            ErrorLog("KenshiLib::GetRealAddress() should only be used for KensihLib-exported function stubs with addresses in KenshiLib.dll");
+            return (intptr_t)fun;
+        }
+
+        uintptr_t callerAddr = (uintptr_t)_ReturnAddress();
+        uintptr_t callerBase = 0;
+        GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS, (LPCSTR)callerAddr, (HMODULE*)&callerBase);
+        std::wstringstream str;
+        str << L"Incorrect address in KenshiLib::GetRealAddress()\n";
+        if (moduleBase == callerBase)
+            // caller is hooking themselves
+            str << L"The address you provided appears to be in your own module, try disabling \"whole program optimization\" in your compilation settings.\n";
+        if (moduleName == "KenshiLib.dll")
+            str << L"The function you are trying to hook appears to be a non-stub KenshiLib function. This is either a KenshiLib bug or you're trying to hook an internal KenshiLib function.\n";
+        str << L"Function address: " << std::wstring(moduleName.begin(), moduleName.end()) << "+0x" << std::hex << offset << std::endl;
+        str << L"KenshiLib::GetRealAddress() should only be called on KensihLib-exported function stubs with addresses in KenshiLib.dll\n";
+        assert_release((uintptr_t&)fun >= (uintptr_t)&FUNC_BEGIN && (uintptr_t&)fun <= (uintptr_t)&FUNC_END, str.str().c_str());
+        return (intptr_t)fun;
+    }
 	return function_pointers[GetFunctionSlot(fun)]; // the cast has to be to a ref to work with member functions in VC++
 }
