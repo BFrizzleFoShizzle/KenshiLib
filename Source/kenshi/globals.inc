@@ -19,3 +19,8 @@ QWORD 0
 ?options@@3PEAVOptionsHolder@@EA proc EXPORT
 QWORD 0
 ?options@@3PEAVOptionsHolder@@EA endp
+
+; class ForgottenGUI gui; // RVA = 0x21306C0 Global
+?gui@@3PEAVForgottenGUI@@EA proc EXPORT
+QWORD 0
+?gui@@3PEAVForgottenGUI@@EA endp

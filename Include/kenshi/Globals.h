@@ -9,6 +9,7 @@ class InputHandler;
 class OptionsHolder;
 class GameData;
 class GameDataContainer;
+class ForgottenGUI;
 
 // TODO
 namespace FoliageSystem
@@ -26,3 +27,4 @@ __declspec(dllimport) GameWorld* ou;
 __declspec(dllimport) GlobalConstants* con;
 __declspec(dllimport) InputHandler* key;
 __declspec(dllimport) OptionsHolder* options;
+__declspec(dllimport) ForgottenGUI* gui;
