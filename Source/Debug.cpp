@@ -9,6 +9,7 @@
 #include <Windows.h>
 #include <intrin.h>
 #include <Shlwapi.h>
+#include <stdint.h>
 
 std::stringstream debugLog;
 std::ofstream debugFile("RE_Kenshi_log.txt");
@@ -120,6 +121,10 @@ std::string GetLastErrorStdStr()
 
 			return result;
 		}
+		else
+		{
+			return std::to_string((int64_t)error);
+		}
 	}
-	return std::string();
+	return "No error";
 }
