@@ -2522,6 +2522,18 @@
     <ClInclude Include="Include\kenshi\Terrain.h">
       <Filter>Header Files\kenshi</Filter>
     </ClInclude>
+    <ClInclude Include="Include\kenshi\KingOfRenderThread.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\MeshDataLookup.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\Renderer.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\RenderToTextureotron.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="Libraries\ogre\OgreMain_x64.lib">
@@ -2984,6 +2996,9 @@
     </None>
     <None Include="Include\kenshi\util\iVector2.h">
       <Filter>Header Files\kenshi\util</Filter>
+    </None>
+    <None Include="Source\kenshi\functions\RenderToTextureotron.inc">
+      <Filter>Source Files\kenshi\functions</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -10,6 +10,7 @@ class OptionsHolder;
 class GameData;
 class GameDataContainer;
 class ForgottenGUI;
+class KingOfRenderThread;
 
 // TODO
 namespace FoliageSystem
@@ -28,3 +29,4 @@ __declspec(dllimport) GlobalConstants* con;
 __declspec(dllimport) InputHandler* key;
 __declspec(dllimport) OptionsHolder* options;
 __declspec(dllimport) ForgottenGUI* gui;
+__declspec(dllimport) KingOfRenderThread* au;

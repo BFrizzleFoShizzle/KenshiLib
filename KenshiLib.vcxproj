@@ -205,6 +205,7 @@
     <None Include="Source\kenshi\functions\RaceData.inc" />
     <None Include="Source\kenshi\functions\RaceLimiter.inc" />
     <None Include="Source\kenshi\functions\RaceLimiter_Limiter.inc" />
+    <None Include="Source\kenshi\functions\RenderToTextureotron.inc" />
     <None Include="Source\kenshi\functions\rendHit.inc" />
     <None Include="Source\kenshi\functions\RobotLimbs.inc" />
     <None Include="Source\kenshi\functions\RootObject.inc" />
@@ -348,8 +349,10 @@
     <ClInclude Include="Include\kenshi\Item.h" />
     <ClInclude Include="Include\kenshi\Kenshi.h" />
     <ClInclude Include="Include\kenshi\InputHandler.h" />
+    <ClInclude Include="Include\kenshi\KingOfRenderThread.h" />
     <ClInclude Include="Include\kenshi\Logger.h" />
     <ClInclude Include="Include\kenshi\MedicalSystem.h" />
+    <ClInclude Include="Include\kenshi\MeshDataLookup.h" />
     <ClInclude Include="Include\kenshi\ModInfo.h" />
     <ClInclude Include="Include\kenshi\NavInstance.h" />
     <ClInclude Include="Include\kenshi\NavMesh.h" />
@@ -360,6 +363,8 @@
     <ClInclude Include="Include\kenshi\Platoon.h" />
     <ClInclude Include="Include\kenshi\PlayerInterface.h" />
     <ClInclude Include="Include\kenshi\RaceData.h" />
+    <ClInclude Include="Include\kenshi\Renderer.h" />
+    <ClInclude Include="Include\kenshi\RenderToTextureotron.h" />
     <ClInclude Include="Include\kenshi\ResourceLoader.h" />
     <ClInclude Include="Include\kenshi\RootObject.h" />
     <ClInclude Include="Include\kenshi\RootObjectBase.h" />
