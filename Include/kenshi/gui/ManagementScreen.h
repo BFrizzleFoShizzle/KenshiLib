@@ -1,6 +1,8 @@
 #pragma once
 
 #include <mygui/common/baselayout/BaseLayout.h>
+#include <mygui/common/itembox/BaseItemBox.h>
+#include <mygui/common/itembox/BaseCellView.h>
 #include <kenshi/util/lektor.h>
 #include <boost/function.hpp>
 #include <boost/thread/shared_mutex.hpp>
@@ -20,6 +22,33 @@ enum MessageLogColor
     ML_NORMAL,
     ML_PLAYER,
     ML_SYSTEM
+};
+
+// TODO move?
+template<typename T>
+class ReorderableListItem : public wraps::BaseCellView<T>, public Ogre::GeneralAllocatedObject
+{
+public:
+    // wraps::BaseCellView<CraftingQueue::CraftItemViewData> offset = 0x0, length = 0xA0
+    // Ogre::AllocatedObject<Ogre::CategorisedAllocPolicy<0> > offset = 0xA1, length = 0x1
+    // no_addr void ReorderableListItem<CraftingQueue::CraftItemViewData>(const class ReorderableListItem<CraftingQueue::CraftItemViewData> & _a1);// public missing arg names
+    ReorderableListItem<T>(MyGUI::Widget* parent);// public RVA = 0x2D3330
+    //ReorderableListItem<T>* _CONSTRUCTOR(MyGUI::Widget* parent);// public RVA = 0x2D3330
+    virtual ~ReorderableListItem<T>();// public RVA = 0x2D3720 vtable offset = 0x0
+    void _DESTRUCTOR();// public RVA = 0x2D3720 vtable offset = 0x0
+    void update(const MyGUI::IBDrawItemInfo& info, const T& data);// public RVA = 0x2CC4B0
+    static void getCellDimension(MyGUI::Widget* _sender, MyGUI::types::TCoord<int>& _coord, bool _drop);// public RVA = 0x2C75F0
+    // no_addr class MyGUI::Widget * getWidget();// public
+    MyGUI::TextBox* itemText; // 0xA8 Member
+    MyGUI::TextBox* itemValue; // 0xB0 Member
+    MyGUI::Widget* progress; // 0xB8 Member
+    MyGUI::Button* removeButton; // 0xC0 Member
+    int itemIndex; // 0xC8 Member
+    boost::function<void __cdecl(int)> removeCallback; // 0xD0 Member
+    void onRemove(MyGUI::Widget* _a1);// private RVA = 0x2CFA90 missing arg names
+    void onMouseMove(MyGUI::Widget* w, int x, int y);// private RVA = 0x2CD670
+    // no_addr class ReorderableListItem<CraftingQueue::CraftItemViewData> & operator=(const class ReorderableListItem<CraftingQueue::CraftItemViewData> & _a1);// public missing arg names
+    // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };
 
 // TODO move?
