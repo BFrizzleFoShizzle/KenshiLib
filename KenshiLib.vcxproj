@@ -350,6 +350,7 @@
     <ClInclude Include="Include\kenshi\Kenshi.h" />
     <ClInclude Include="Include\kenshi\InputHandler.h" />
     <ClInclude Include="Include\kenshi\KingOfRenderThread.h" />
+    <ClInclude Include="Include\kenshi\LocaleInfo.h" />
     <ClInclude Include="Include\kenshi\Logger.h" />
     <ClInclude Include="Include\kenshi\MedicalSystem.h" />
     <ClInclude Include="Include\kenshi\MeshDataLookup.h" />

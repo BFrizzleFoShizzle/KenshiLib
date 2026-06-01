@@ -29,3 +29,8 @@ QWORD 0
 ?au@@3PEAVKingOfRenderThread@@EA proc EXPORT
 QWORD 0
 ?au@@3PEAVKingOfRenderThread@@EA endp
+
+; class std::locale globalLocale; // RVA = 0x212FE28 Global
+?globalLocale@@3PEAVlocale@std@@EA proc EXPORT
+QWORD 0
+?globalLocale@@3PEAVlocale@std@@EA endp

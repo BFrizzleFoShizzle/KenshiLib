@@ -1,6 +1,7 @@
 #pragma once
 
 #include <ogre/OgreQuaternion.h>
+#include <locale>
 
 class Item;
 class GameWorld;
@@ -30,3 +31,4 @@ __declspec(dllimport) InputHandler* key;
 __declspec(dllimport) OptionsHolder* options;
 __declspec(dllimport) ForgottenGUI* gui;
 __declspec(dllimport) KingOfRenderThread* au;
+__declspec(dllimport) std::locale* globalLocale;
