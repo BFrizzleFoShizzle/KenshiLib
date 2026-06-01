@@ -11,6 +11,26 @@ class Tasker;
 class OrdersPanel;
 
 // TODO move?
+class OrderData : public Ogre::GeneralAllocatedObject
+{
+public:
+    // Ogre::AllocatedObject<Ogre::CategorisedAllocPolicy<0> > offset = 0x0, length = 0x1
+    // no_addr void OrderData(const class OrderData & _a1);// public missing arg names
+    OrderData();// public RVA = 0x721B50
+    OrderData* _CONSTRUCTOR();// public RVA = 0x721B50
+    void set(const Tasker* _task, int _index, bool _enabled);// public RVA = 0x7251C0
+    void updateText();// public RVA = 0x723AE0
+    const Tasker* task; // 0x0 Member
+    int index; // 0x8 Member
+    std::string text; // 0x10 Member
+    bool enabled; // 0x38 Member
+    ~OrderData();// public RVA = 0x737AC0
+    void _DESTRUCTOR();// public RVA = 0x737AC0
+    OrderData& operator=(const OrderData& __that);// public RVA = 0x739490
+    // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
+};
+
+// TODO move?
 class OrderCellView : public wraps::BaseCellView<OrderData*>, public Ogre::GeneralAllocatedObject
 {
 public:
@@ -33,26 +53,6 @@ public:
     static OrdersPanel* ordersPanel; // RVA = 0x212FB48 Static Member
     // no_addr class OrderCellView & operator=(const class OrderCellView & _a1);// public missing arg names
     // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
-};
-
-// TODO move?
-class OrderData : public Ogre::GeneralAllocatedObject
-{
-public:
-    // Ogre::AllocatedObject<Ogre::CategorisedAllocPolicy<0> > offset = 0x0, length = 0x1
-    // no_addr void OrderData(const class OrderData & _a1);// public missing arg names
-    OrderData();// public RVA = 0x721B50
-    OrderData* _CONSTRUCTOR();// public RVA = 0x721B50
-    void set(const Tasker* _task, int _index, bool _enabled);// public RVA = 0x7251C0
-    void updateText();// public RVA = 0x723AE0
-    const Tasker* task; // 0x0 Member
-    int index; // 0x8 Member
-    std::string text; // 0x10 Member
-    bool enabled; // 0x38 Member
-    ~OrderData();// public RVA = 0x737AC0
-    void _DESTRUCTOR();// public RVA = 0x737AC0
-    OrderData& operator=(const OrderData& __that);// public RVA = 0x739490
-    // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
 };
 
 class OrdersItemBox : public wraps::BaseItemBox<OrderCellView>, public Ogre::GeneralAllocatedObject
