@@ -17,346 +17,369 @@ _AppearanceManager_DataRangeVector_base EQU 287*8
 _AppearanceManager_Gender_base EQU 296*8
 _Armour_base EQU 303*8
 _BackpackInventoryLayout_base EQU 316*8
-_Bounty_base EQU 319*8
-_BountyManager_base EQU 322*8
-_Building_base EQU 352*8
-_Building_ConstructionState_base EQU 539*8
-_Building_ConstructionState_BuildMaterial_base EQU 557*8
-_BuildingContainerInventoryLayout_base EQU 559*8
-_BuildInventoryLayout_base EQU 563*8
-_BuildModeWindow_base EQU 573*8
-_BuildModeWindow_BuildingCategory_base EQU 596*8
-_BuildModeWindow_BuildingGroup_base EQU 601*8
-_CameraClass_base EQU 606*8
-_Character_base EQU 638*8
-_Character_AttachedArrowManager_base EQU 967*8
-_Character_CarryMsg_base EQU 973*8
-_Character_RagdollMsg_base EQU 973*8
-_Character_WhoSeesMe_base EQU 975*8
-_CharacterAnimal_base EQU 977*8
-_CharacterEditWindow_base EQU 1006*8
-_CharacterHuman_base EQU 1054*8
-_CharacterInventoryLayout_base EQU 1079*8
-_CharacterStatsWindow_base EQU 1082*8
-_CharacterStatsWindow_Stat_base EQU 1102*8
-_CharacterStatsWindow_StatGroup_base EQU 1107*8
-_CharBody_base EQU 1111*8
-_CharMovement_base EQU 1141*8
-_CharStats_base EQU 1202*8
-_CombatClass_base EQU 1327*8
-_CombatClass_AttackSlotManager_base EQU 1396*8
-_CombatClass_AttackSlotManager_SlotData_base EQU 1406*8
-_CombatClass_EffectData_base EQU 1408*8
-_CombatMovementController_base EQU 1411*8
-_CombatTechniqueData_base EQU 1429*8
-_ContainerItem_base EQU 1433*8
-_ContextMenu_base EQU 1453*8
-_ContextMenuGUI_base EQU 1459*8
-_CraftingBuilding_base EQU 1466*8
-_CraftingInventoryLayout_base EQU 1501*8
-_Crossbow_base EQU 1508*8
-_Damages_base EQU 1521*8
-_DataObjectContainer_base EQU 1527*8
-_DatapanelGUI_base EQU 1534*8
-_DataPanelLine_base EQU 1603*8
-_DataPanelLine_Button_base EQU 1622*8
-_DataPanelLine_CheckBox_base EQU 1629*8
-_DataPanelLine_DropBox_base EQU 1639*8
-_DataPanelLine_Faction_base EQU 1652*8
-_DataPanelLine_KeyConfig_base EQU 1655*8
-_DataPanelLine_Progress_base EQU 1665*8
-_DataPanelLine_Research_base EQU 1669*8
-_DataPanelLine_Slider_base EQU 1674*8
-_DataPanelLine_SliderEditable_base EQU 1682*8
-_DataPanelLine_Text_base EQU 1694*8
-_DataPanelLine_TextEditable_base EQU 1697*8
-_DialogChoiceList_base EQU 1703*8
-_DialogDataManager_base EQU 1706*8
-_DialogLineData_base EQU 1712*8
-_Dialogue_base EQU 1742*8
-_Dialogue_RepetitionCounter_base EQU 1813*8
-_Dialogue_RepetitionCounter_DialogState_base EQU 1819*8
-_DialogueSpeechBubble_base EQU 1820*8
-_DialogueWindow_base EQU 1829*8
-_DoorStuff_base EQU 1845*8
-_EdgeCache_base EQU 1895*8
-_EdgeCache_Edge_base EQU 1897*8
-_Faction_base EQU 1898*8
-_Faction_BuildingSwaps_base EQU 1965*8
-_Faction_CharacteristicsData_base EQU 1971*8
-_FactionLeader_base EQU 1971*8
-_FactionManager_base EQU 1976*8
-_FactionRelations_base EQU 1996*8
-_FactionRelations_RelationData_base EQU 2025*8
-_FactionsScreen_base EQU 2031*8
-_FactionsScreen_FactionRelationsLine_base EQU 2043*8
-_FactionsScreen_FactionRelationsLine_LessSort_base EQU 2047*8
-_FactionUniqueSquadManager_base EQU 2048*8
-_FactionUniqueSquadManager_UniqueSpawnData_base EQU 2060*8
-_FactionWarMgr_base EQU 2063*8
-_FactionWarMgr_CampaignRequest_base EQU 2091*8
-_FactoryCallbackInterface_base EQU 2093*8
-_FarmBuilding_base EQU 2094*8
-_FarmBuilding_FarmBatch_base EQU 2133*8
-_FarmBuilding_Plant_base EQU 2138*8
-_FarmBuilding_PlantSource_base EQU 2142*8
-_FarmBuilding_SubPlant_base EQU 2143*8
-_FloatingProgressBar_base EQU 2143*8
-_FloatingProgressBar_ProgressBarWidget_base EQU 2148*8
-_FlockingTools_base EQU 2154*8
-_FogEditor_base EQU 2164*8
-_FoliageSystem_base EQU 2178*8
-_FoliageSystem_EntData_base EQU 2193*8
-_FoliageSystem_TreeData_base EQU 2201*8
-_ForgottenGUI_base EQU 2204*8
-_FormationMover_base EQU 2322*8
-_FurnaceBuilding_base EQU 2328*8
-_FurnaceInventoryLayout_base EQU 2345*8
-_GameData_base EQU 2348*8
-_GameData_ItemData_base EQU 2405*8
-_GameData_ObjectInstance_base EQU 2405*8
-_GameDataContainer_base EQU 2410*8
-_GameDataCopyStandalone_base EQU 2442*8
-_GameDataEditorWindow_base EQU 2444*8
-_GameDataGroup_base EQU 2448*8
-_GameDataHeader_base EQU 2449*8
-_GameDataManager_base EQU 2454*8
-_GameDataReference_base EQU 2462*8
-_GameDataValuePair_base EQU 2468*8
-_GameLauncher_base EQU 2470*8
-_GameLauncher_TabChangelog_base EQU 2486*8
-_GameLauncher_TabMods_base EQU 2494*8
-_GameLauncher_TabVideo_base EQU 2512*8
-_GameLauncher_VideoDevice_base EQU 2530*8
-_GameLauncher_VideoRenderer_base EQU 2534*8
-_GameplayOptions_base EQU 2549*8
-_GameSaveState_base EQU 2554*8
-_GameWorld_base EQU 2572*8
-_GameWorld_SysMessage_base EQU 2664*8
-_GatewayBuilding_base EQU 2667*8
-_Gear_base EQU 2680*8
-_GeneratorBuilding_base EQU 2690*8
-_GenericFixedInventoryLayout_base EQU 2696*8
-_GenericInventoryLayout_base EQU 2699*8
-_GlobalConstants_base EQU 2703*8
-_GUIWindow_base EQU 2704*8
-_hand_base EQU 2718*8
-_HavokCharacter_base EQU 2750*8
-_hkBool_base EQU 2790*8
-_hkContainerHeapAllocator_base EQU 2795*8
-_hkContainerHeapAllocator_Allocator_base EQU 2796*8
-_hkMemoryAllocator_base EQU 2806*8
-_hkMemoryAllocator_ExtendedInterface_base EQU 2816*8
-_hkMemoryAllocator_MemoryStatistics_base EQU 2818*8
-_hkVector4f_base EQU 2819*8
-_hkVector4fComparison_base EQU 2936*8
-_ImportGameMenu_base EQU 2952*8
-_InputHandler_base EQU 2957*8
-_InputHandler_Command_base EQU 2983*8
-_InstanceID_base EQU 2987*8
-_InteriorModeButtonWindow_base EQU 3003*8
-_Inventory_base EQU 3035*8
-_Inventory_HasRoomCache_base EQU 3110*8
-_InventoryGUI_base EQU 3116*8
-_InventoryGUI_FenceCallbackData_base EQU 3179*8
-_InventoryGUI_InventoryTradeData_base EQU 3181*8
-_InventoryGUI_TradeResult_base EQU 3186*8
-_InventoryIcon_base EQU 3191*8
-_InventoryItemBase_base EQU 3200*8
-_InventoryLayout_base EQU 3229*8
-_InventorySection_base EQU 3240*8
-_InventorySectionGUI_base EQU 3287*8
-_InventoryTraderGUI_base EQU 3297*8
-_Item_base EQU 3303*8
-_iVector2_base EQU 3353*8
-_KingOfRenderThread_base EQU 3361*8
-_LevelEditor_base EQU 3377*8
-_LevelEditor_FactionListWindow_base EQU 3436*8
-_LevelEditor_GamedataSelectionList_base EQU 3439*8
-_LevelEditor_ItemListWindow_base EQU 3447*8
-_LevelEditor_NpcListWindow_base EQU 3450*8
-_LevelEditor_SquadListWindow_base EQU 3453*8
-_LevelEditor_TownListWindow_base EQU 3457*8
-_LightBuilding_base EQU 3460*8
-_LimbsInventoryLayout_base EQU 3470*8
-_LoadingWindow_base EQU 3473*8
-_LoadSaveWindow_base EQU 3484*8
-_LocaleInfo_base EQU 3499*8
-_LocaleManager_base EQU 3503*8
-_LockedArmour_base EQU 3514*8
-_Logger_base EQU 3522*8
-_MainBarGUI_base EQU 3527*8
-_MainTabPortraitPlatoon_base EQU 3579*8
-_ManagementScreen_base EQU 3586*8
-_ManagementScreen_TechItemViewData_base EQU 3623*8
-_MapScreen_base EQU 3630*8
-_MapScreen_MapMarkerCharacter_base EQU 3661*8
-_MapScreen_MapMarkerTown_base EQU 3666*8
-_MapScreen_MapRoad_base EQU 3671*8
-_MedianFilter_base EQU 3672*8
-_MedianFilter2DVector_base EQU 3678*8
-_MedicalSystem_base EQU 3682*8
-_MedicalSystem_HealthPartStatus_base EQU 3772*8
-_MeshDataLookup_base EQU 3790*8
-_MessageBoxManager_base EQU 3793*8
-_MessageBoxManager_Box_base EQU 3797*8
-_ModInfo_base EQU 3800*8
-_MotionFilter_base EQU 3805*8
-_NavInstance_base EQU 3809*8
-_NavMesh_base EQU 3811*8
-_NavMesh_BuildingInfo_base EQU 3893*8
-_NavMesh_NavMeshMessage_base EQU 3897*8
-_NavMeshGenerator_base EQU 3899*8
-_NavMeshGenerator_Task_base EQU 3944*8
-_NavMeshGenerator_TaskQueue_base EQU 3946*8
-_NavMeshSeeds_base EQU 3950*8
-_NewGameOptionsWindow_base EQU 3960*8
-_NewGameWindow_base EQU 3967*8
-_NxBox_base EQU 3983*8
-_NxMat33_base EQU 3987*8
-_NxUserControllerHitReport_base EQU 4012*8
-_NxUserTriggerReport_base EQU 4014*8
-_NxVec3_base EQU 4016*8
-_OpenSaveFileDialog_base EQU 4047*8
-_OptionsHolder_base EQU 4068*8
-_OptionsWindow_base EQU 4074*8
-_OrderCellView_base EQU 4098*8
-_OrderData_base EQU 4105*8
-_OrdersItemBox_base EQU 4110*8
-_OrdersPanel_base EQU 4112*8
-_Ownerships_base EQU 4137*8
-_ParticlePool_base EQU 4163*8
-_ParticlePool_ParticleData_base EQU 4171*8
-_physHit_base EQU 4172*8
-_PhysicalEntity_base EQU 4182*8
-_PhysicsActual_base EQU 4184*8
-_PhysicsActual_TriggerCallback_base EQU 4205*8
-_PhysicsCollection_base EQU 4209*8
-_PhysicsCollection_LightEnt_base EQU 4219*8
-_PhysicsCollection_RotatingEnt_base EQU 4223*8
-_PhysicsCollection_StaticEnt_base EQU 4230*8
-_PhysicsInterface_base EQU 4235*8
-_Platoon_base EQU 4257*8
-_PlayerInterface_base EQU 4310*8
-_PlayerInterface_AIOptions_base EQU 4402*8
-_PortraitData_base EQU 4405*8
-_PortraitImage_base EQU 4416*8
-_PortraitMainCellView_base EQU 4419*8
-_PortraitManager_base EQU 4425*8
-_PreviewBuilding_base EQU 4446*8
-_PreviewBuilding_Footprint_base EQU 4507*8
-_PreviewBuilding_FootprintNode_base EQU 4529*8
-_ProductionBuilding_base EQU 4539*8
-_ProductionInventoryLayout_base EQU 4578*8
-_ProspectingWindow_base EQU 4580*8
-_ProsperityManager_base EQU 4594*8
-_RaceData_base EQU 4603*8
-_RaceLimiter_base EQU 4613*8
-_RaceLimiter_Limiter_base EQU 4619*8
-_RainCollectorBuilding_base EQU 4622*8
-_Renderer_base EQU 4628*8
-_RendererT_base EQU 4657*8
-_RenderToTextureotron_base EQU 4659*8
-_rendHit_base EQU 4675*8
-_ResearchBuilding_base EQU 4676*8
-_ResearchBuildingInventoryLayout_base EQU 4687*8
-_ResourceLoader_base EQU 4691*8
-_ResourceLoader_MeshLoadData_base EQU 4717*8
-_ResourceLoader_ResourceLoadRequestMesh_base EQU 4720*8
-_ResourceLoader_ResourceLoadRequestTexture_base EQU 4723*8
-_ResourceLoader_TextureArrayLoadData_base EQU 4727*8
-_ResourceLoader_TextureLoadData_base EQU 4731*8
-_RobotLimbs_base EQU 4735*8
-_RootObject_base EQU 4746*8
-_RootObjectBase_base EQU 4794*8
-_RootObjectContainer_base EQU 4817*8
-_RootObjectContainer_SpecificItemLoadFirst_base EQU 4831*8
-_RootObjectFactory_base EQU 4835*8
-_RootObjectFactory_CreatelistItem_base EQU 4856*8
-_SaveFileSystem_base EQU 4857*8
-_SaveFileSystem_FileMessage_base EQU 4879*8
-_SaveInfo_base EQU 4882*8
-_SaveManager_base EQU 4886*8
-_ScreenLabel_base EQU 4916*8
-_ScreenLabelDebug_base EQU 4925*8
-_ScreenLabelInterface_base EQU 4929*8
-_Scythe_PhysicsClass_base EQU 4933*8
-_SeenSomeone_base EQU 4941*8
-_SelectionBox_base EQU 4945*8
-_SenseItr_base EQU 4954*8
-_SensoryData_base EQU 4960*8
-_SensoryData_SpottingPeopleMgr_base EQU 5006*8
-_SensoryData_SpottingPeopleMgr_Spot_base EQU 5014*8
-_Serialisable_base EQU 5015*8
-_ShopTrader_base EQU 5016*8
-_ShopTraderInventory_base EQU 5038*8
-_ShopTraderInventorySection_base EQU 5050*8
-_SimpleTimeStamper_base EQU 5054*8
-_SpeedGroup_base EQU 5058*8
-_SplashScreen_base EQU 5063*8
-_SquadManagementScreen_base EQU 5070*8
-_SquadManagementScreen_PortraitSquadCellView_base EQU 5086*8
-_SquadManagementScreen_PortraitSquadItemBox_base EQU 5092*8
-_SquadManagementScreen_SquadCellView_base EQU 5096*8
-_SquadManagementScreen_SquadData_base EQU 5103*8
-_SquadManagementScreen_SquadItemBox_base EQU 5107*8
-_StorageBuilding_base EQU 5111*8
-_StorageBuilding_ConsumptionItem_base EQU 5133*8
-_StringPair_base EQU 5137*8
-_Sword_base EQU 5143*8
-_TaskData_base EQU 5151*8
-_Tasker_base EQU 5181*8
-_TaskStateData_base EQU 5210*8
-_Terrain_base EQU 5212*8
-_ThreadClass_base EQU 5212*8
-_ThreadWannabe_base EQU 5224*8
-_TimeOfDay_base EQU 5230*8
-_TimerClass_base EQU 5258*8
-_TitleScreen_base EQU 5259*8
-_ToolTip_base EQU 5274*8
-_ToolTip_ToolTipLine_base EQU 5297*8
-_ToolTipDynamic_base EQU 5299*8
-_ToolTipFixed_base EQU 5303*8
-_ToolTipInventory_base EQU 5312*8
-_ToolTipStatic_base EQU 5322*8
-_TortureBuilding_base EQU 5330*8
-_Town_base EQU 5334*8
-_Town_NestSpot_base EQU 5408*8
-_TownBase_base EQU 5411*8
-_TownBase_DelayedSpawnMsg_base EQU 5495*8
-_TownBase_ResidentData_base EQU 5497*8
-_TownBase_TownPositionCacher_base EQU 5501*8
-_TownBuildingsManager_base EQU 5504*8
-_TownBuildingsManager_BuildingInfo_base EQU 5526*8
-_TradeCulture_base EQU 5529*8
-_TraderInventoryLayout_base EQU 5538*8
-_TransformWindow_base EQU 5543*8
-_TripleInt_base EQU 5567*8
-_TurretBuilding_base EQU 5573*8
-_TutorialGUI_base EQU 5602*8
-_TutorialGUI_TutorialGUILine_base EQU 5624*8
-_TutorialItem_base EQU 5627*8
-_TutorialpediaGUI_base EQU 5649*8
-_TutorialSubItem_base EQU 5661*8
-_UseableStuff_base EQU 5667*8
-_UtilityT_base EQU 5738*8
-_VisibleObjectInfo_base EQU 5840*8
-_WallBuilding_base EQU 5843*8
-_Weapon_base EQU 5869*8
-_WeatherRegion_base EQU 5883*8
-_WeatherRegion_Listener_base EQU 5899*8
-_WindGeneratorBuilding_base EQU 5900*8
-_WorldEventStateQuery_base EQU 5907*8
-_WorldEventStateQueryList_base EQU 5911*8
-_wraps_BaseLayout_base EQU 5916*8
-_YesNoMaybe_base EQU 5923*8
-_ZoneManager_base EQU 5934*8
-_ZoneManager_BiomeGroundEffects_base EQU 6014*8
-_ZoneManagerInterfaceT_base EQU 6015*8
-_ZoneMap_base EQU 6016*8
-_ZoneMap_StateT_base EQU 6061*8
-_ZoneSpacialGrid_base EQU 6062*8
-_static_functions_base EQU 6075*8
+_BlueprintItem_base EQU 319*8
+_Bounty_base EQU 330*8
+_BountyManager_base EQU 333*8
+_Building_base EQU 363*8
+_Building_ConstructionState_base EQU 550*8
+_Building_ConstructionState_BuildMaterial_base EQU 568*8
+_BuildingContainerInventoryLayout_base EQU 570*8
+_BuildInventoryLayout_base EQU 574*8
+_BuildModeWindow_base EQU 584*8
+_BuildModeWindow_BuildingCategory_base EQU 607*8
+_BuildModeWindow_BuildingGroup_base EQU 612*8
+_CameraClass_base EQU 617*8
+_Character_base EQU 649*8
+_Character_AttachedArrowManager_base EQU 978*8
+_Character_CarryMsg_base EQU 984*8
+_Character_RagdollMsg_base EQU 984*8
+_Character_WhoSeesMe_base EQU 986*8
+_CharacterAnimal_base EQU 988*8
+_CharacterEditWindow_base EQU 1017*8
+_CharacterHuman_base EQU 1065*8
+_CharacterInventoryLayout_base EQU 1090*8
+_CharacterStatsWindow_base EQU 1093*8
+_CharacterStatsWindow_Stat_base EQU 1113*8
+_CharacterStatsWindow_StatGroup_base EQU 1118*8
+_CharBody_base EQU 1122*8
+_CharMovement_base EQU 1152*8
+_CharStats_base EQU 1213*8
+_CombatClass_base EQU 1338*8
+_CombatClass_AttackSlotManager_base EQU 1407*8
+_CombatClass_AttackSlotManager_SlotData_base EQU 1417*8
+_CombatClass_EffectData_base EQU 1419*8
+_CombatMovementController_base EQU 1422*8
+_CombatTechniqueData_base EQU 1440*8
+_ContainerItem_base EQU 1444*8
+_ContextMenu_base EQU 1464*8
+_ContextMenuGUI_base EQU 1470*8
+_CraftingBuilding_base EQU 1477*8
+_CraftingInventoryLayout_base EQU 1512*8
+_Crossbow_base EQU 1519*8
+_Damages_base EQU 1532*8
+_DataObjectContainer_base EQU 1538*8
+_DatapanelGUI_base EQU 1545*8
+_DataPanelLine_base EQU 1614*8
+_DataPanelLine_Button_base EQU 1633*8
+_DataPanelLine_CheckBox_base EQU 1640*8
+_DataPanelLine_DropBox_base EQU 1650*8
+_DataPanelLine_Faction_base EQU 1663*8
+_DataPanelLine_KeyConfig_base EQU 1666*8
+_DataPanelLine_Progress_base EQU 1676*8
+_DataPanelLine_Research_base EQU 1680*8
+_DataPanelLine_Slider_base EQU 1685*8
+_DataPanelLine_SliderEditable_base EQU 1693*8
+_DataPanelLine_Text_base EQU 1705*8
+_DataPanelLine_TextEditable_base EQU 1708*8
+_DialogChoiceList_base EQU 1714*8
+_DialogDataManager_base EQU 1717*8
+_DialogLineData_base EQU 1723*8
+_Dialogue_base EQU 1753*8
+_Dialogue_RepetitionCounter_base EQU 1824*8
+_Dialogue_RepetitionCounter_DialogState_base EQU 1830*8
+_DialogueSpeechBubble_base EQU 1831*8
+_DialogueWindow_base EQU 1840*8
+_DoorStuff_base EQU 1856*8
+_EdgeCache_base EQU 1906*8
+_EdgeCache_Edge_base EQU 1908*8
+_Faction_base EQU 1909*8
+_Faction_BuildingSwaps_base EQU 1976*8
+_Faction_CharacteristicsData_base EQU 1982*8
+_FactionLeader_base EQU 1982*8
+_FactionManager_base EQU 1987*8
+_FactionRelations_base EQU 2007*8
+_FactionRelations_RelationData_base EQU 2036*8
+_FactionsScreen_base EQU 2042*8
+_FactionsScreen_FactionRelationsLine_base EQU 2054*8
+_FactionsScreen_FactionRelationsLine_LessSort_base EQU 2058*8
+_FactionUniqueSquadManager_base EQU 2059*8
+_FactionUniqueSquadManager_UniqueSpawnData_base EQU 2071*8
+_FactionWarMgr_base EQU 2074*8
+_FactionWarMgr_CampaignRequest_base EQU 2102*8
+_FactoryCallbackInterface_base EQU 2104*8
+_FarmBuilding_base EQU 2105*8
+_FarmBuilding_FarmBatch_base EQU 2144*8
+_FarmBuilding_Plant_base EQU 2149*8
+_FarmBuilding_PlantSource_base EQU 2153*8
+_FarmBuilding_SubPlant_base EQU 2154*8
+_FloatingProgressBar_base EQU 2154*8
+_FloatingProgressBar_ProgressBarWidget_base EQU 2159*8
+_FlockingTools_base EQU 2165*8
+_FogEditor_base EQU 2175*8
+_FoliageSystem_base EQU 2189*8
+_FoliageSystem_EntData_base EQU 2204*8
+_FoliageSystem_TreeData_base EQU 2212*8
+_ForgottenGUI_base EQU 2215*8
+_FormationMover_base EQU 2333*8
+_FurnaceBuilding_base EQU 2339*8
+_FurnaceInventoryLayout_base EQU 2356*8
+_GameData_base EQU 2359*8
+_GameData_ItemData_base EQU 2416*8
+_GameData_ObjectInstance_base EQU 2416*8
+_GameDataContainer_base EQU 2421*8
+_GameDataCopyStandalone_base EQU 2453*8
+_GameDataEditorWindow_base EQU 2455*8
+_GameDataGroup_base EQU 2459*8
+_GameDataHeader_base EQU 2460*8
+_GameDataManager_base EQU 2465*8
+_GameDataReference_base EQU 2473*8
+_GameDataValuePair_base EQU 2479*8
+_GameLauncher_base EQU 2481*8
+_GameLauncher_TabChangelog_base EQU 2497*8
+_GameLauncher_TabMods_base EQU 2505*8
+_GameLauncher_TabVideo_base EQU 2523*8
+_GameLauncher_VideoDevice_base EQU 2541*8
+_GameLauncher_VideoRenderer_base EQU 2545*8
+_GameplayOptions_base EQU 2560*8
+_GameSaveState_base EQU 2565*8
+_GameWorld_base EQU 2583*8
+_GameWorld_SysMessage_base EQU 2675*8
+_GatewayBuilding_base EQU 2678*8
+_Gear_base EQU 2691*8
+_GeneratorBuilding_base EQU 2701*8
+_GenericFixedInventoryLayout_base EQU 2707*8
+_GenericInventoryLayout_base EQU 2710*8
+_GlobalConstants_base EQU 2714*8
+_GUIWindow_base EQU 2715*8
+_GunClass_base EQU 2729*8
+_GunClassPersonal_base EQU 2768*8
+_GunClassTurret_base EQU 2786*8
+_hand_base EQU 2805*8
+_HandleContainerList_base EQU 2837*8
+_HandleList_base EQU 2843*8
+_HandleListBase_base EQU 2853*8
+_HandleManager_base EQU 2866*8
+_HavokCharacter_base EQU 2889*8
+_hkBool_base EQU 2929*8
+_hkContainerHeapAllocator_base EQU 2934*8
+_hkContainerHeapAllocator_Allocator_base EQU 2935*8
+_hkMemoryAllocator_base EQU 2945*8
+_hkMemoryAllocator_ExtendedInterface_base EQU 2955*8
+_hkMemoryAllocator_MemoryStatistics_base EQU 2957*8
+_hkVector4f_base EQU 2958*8
+_hkVector4fComparison_base EQU 3075*8
+_ImportGameMenu_base EQU 3091*8
+_InputHandler_base EQU 3096*8
+_InputHandler_Command_base EQU 3122*8
+_InstanceID_base EQU 3126*8
+_InteriorModeButtonWindow_base EQU 3142*8
+_Inventory_base EQU 3174*8
+_Inventory_HasRoomCache_base EQU 3249*8
+_InventoryGUI_base EQU 3255*8
+_InventoryGUI_FenceCallbackData_base EQU 3318*8
+_InventoryGUI_InventoryTradeData_base EQU 3320*8
+_InventoryGUI_TradeResult_base EQU 3325*8
+_InventoryIcon_base EQU 3330*8
+_InventoryItemBase_base EQU 3339*8
+_InventoryLayout_base EQU 3368*8
+_InventorySection_base EQU 3379*8
+_InventorySectionGUI_base EQU 3426*8
+_InventoryTraderGUI_base EQU 3436*8
+_Item_base EQU 3442*8
+_ItemHandleList_base EQU 3492*8
+_iVector2_base EQU 3495*8
+_KingOfRenderThread_base EQU 3503*8
+_LevelEditor_base EQU 3519*8
+_LevelEditor_FactionListWindow_base EQU 3578*8
+_LevelEditor_GamedataSelectionList_base EQU 3581*8
+_LevelEditor_ItemListWindow_base EQU 3589*8
+_LevelEditor_NpcListWindow_base EQU 3592*8
+_LevelEditor_SquadListWindow_base EQU 3595*8
+_LevelEditor_TownListWindow_base EQU 3599*8
+_LightBuilding_base EQU 3602*8
+_LimbsInventoryLayout_base EQU 3612*8
+_LoadingWindow_base EQU 3615*8
+_LoadSaveWindow_base EQU 3626*8
+_LocaleInfo_base EQU 3641*8
+_LocaleManager_base EQU 3645*8
+_LockedArmour_base EQU 3656*8
+_Logger_base EQU 3664*8
+_MainBarGUI_base EQU 3669*8
+_MainTabPortraitPlatoon_base EQU 3721*8
+_ManagementScreen_base EQU 3728*8
+_ManagementScreen_TechItemViewData_base EQU 3765*8
+_MapItem_base EQU 3772*8
+_MapScreen_base EQU 3784*8
+_MapScreen_MapMarkerCharacter_base EQU 3815*8
+_MapScreen_MapMarkerTown_base EQU 3820*8
+_MapScreen_MapRoad_base EQU 3825*8
+_MedianFilter_base EQU 3826*8
+_MedianFilter2DVector_base EQU 3832*8
+_MedicalSystem_base EQU 3836*8
+_MedicalSystem_HealthPartStatus_base EQU 3926*8
+_MeshDataLookup_base EQU 3944*8
+_MessageBoxManager_base EQU 3947*8
+_MessageBoxManager_Box_base EQU 3951*8
+_ModInfo_base EQU 3954*8
+_MoneyItem_base EQU 3959*8
+_MotionFilter_base EQU 3965*8
+_NavInstance_base EQU 3969*8
+_NavMesh_base EQU 3971*8
+_NavMesh_BuildingInfo_base EQU 4053*8
+_NavMesh_NavMeshMessage_base EQU 4057*8
+_NavMeshGenerator_base EQU 4059*8
+_NavMeshGenerator_Task_base EQU 4104*8
+_NavMeshGenerator_TaskQueue_base EQU 4106*8
+_NavMeshSeeds_base EQU 4110*8
+_NestItem_base EQU 4120*8
+_NewGameOptionsWindow_base EQU 4124*8
+_NewGameWindow_base EQU 4131*8
+_NxBox_base EQU 4147*8
+_NxMat33_base EQU 4151*8
+_NxUserControllerHitReport_base EQU 4176*8
+_NxUserTriggerReport_base EQU 4178*8
+_NxVec3_base EQU 4180*8
+_OpenSaveFileDialog_base EQU 4211*8
+_OptionsHolder_base EQU 4232*8
+_OptionsWindow_base EQU 4238*8
+_OrderCellView_base EQU 4262*8
+_OrderData_base EQU 4269*8
+_OrdersItemBox_base EQU 4274*8
+_OrdersPanel_base EQU 4276*8
+_Ownerships_base EQU 4301*8
+_ParticlePool_base EQU 4327*8
+_ParticlePool_ParticleData_base EQU 4335*8
+_physHit_base EQU 4336*8
+_PhysicalEntity_base EQU 4346*8
+_PhysicsActual_base EQU 4348*8
+_PhysicsActual_TriggerCallback_base EQU 4369*8
+_PhysicsCollection_base EQU 4373*8
+_PhysicsCollection_LightEnt_base EQU 4383*8
+_PhysicsCollection_RotatingEnt_base EQU 4387*8
+_PhysicsCollection_StaticEnt_base EQU 4394*8
+_PhysicsInterface_base EQU 4399*8
+_Platoon_base EQU 4421*8
+_PlatoonHandleContainerList_base EQU 4474*8
+_PlayerInterface_base EQU 4481*8
+_PlayerInterface_AIOptions_base EQU 4573*8
+_PortraitData_base EQU 4576*8
+_PortraitImage_base EQU 4587*8
+_PortraitMainCellView_base EQU 4590*8
+_PortraitManager_base EQU 4596*8
+_PreviewBuilding_base EQU 4617*8
+_PreviewBuilding_Footprint_base EQU 4678*8
+_PreviewBuilding_FootprintNode_base EQU 4700*8
+_ProductionBuilding_base EQU 4710*8
+_ProductionInventoryLayout_base EQU 4749*8
+_ProspectingWindow_base EQU 4751*8
+_ProsperityManager_base EQU 4765*8
+_RaceData_base EQU 4774*8
+_RaceLimiter_base EQU 4784*8
+_RaceLimiter_Limiter_base EQU 4790*8
+_RainCollectorBuilding_base EQU 4793*8
+_Renderer_base EQU 4799*8
+_RendererT_base EQU 4828*8
+_RenderToTextureotron_base EQU 4830*8
+_rendHit_base EQU 4846*8
+_ResearchBuilding_base EQU 4847*8
+_ResearchBuildingInventoryLayout_base EQU 4858*8
+_ResourceLoader_base EQU 4862*8
+_ResourceLoader_MeshLoadData_base EQU 4888*8
+_ResourceLoader_ResourceLoadRequestMesh_base EQU 4891*8
+_ResourceLoader_ResourceLoadRequestTexture_base EQU 4894*8
+_ResourceLoader_TextureArrayLoadData_base EQU 4898*8
+_ResourceLoader_TextureLoadData_base EQU 4902*8
+_RobotLimbItem_base EQU 4906*8
+_RobotLimbs_base EQU 4914*8
+_RootObject_base EQU 4925*8
+_RootObjectBase_base EQU 4973*8
+_RootObjectContainer_base EQU 4996*8
+_RootObjectContainer_SpecificItemLoadFirst_base EQU 5010*8
+_RootObjectFactory_base EQU 5014*8
+_RootObjectFactory_CreatelistItem_base EQU 5035*8
+_SaveFileSystem_base EQU 5036*8
+_SaveFileSystem_FileMessage_base EQU 5058*8
+_SaveInfo_base EQU 5061*8
+_SaveManager_base EQU 5065*8
+_ScreenLabel_base EQU 5095*8
+_ScreenLabelDebug_base EQU 5104*8
+_ScreenLabelInterface_base EQU 5108*8
+_Scythe_PhysicsClass_base EQU 5112*8
+_Season_base EQU 5120*8
+_SeenSomeone_base EQU 5124*8
+_SelectionBox_base EQU 5128*8
+_SenseItr_base EQU 5137*8
+_SensoryData_base EQU 5143*8
+_SensoryData_SpottingPeopleMgr_base EQU 5189*8
+_SensoryData_SpottingPeopleMgr_Spot_base EQU 5197*8
+_Serialisable_base EQU 5198*8
+_SeveredLimbItem_base EQU 5199*8
+_ShopTrader_base EQU 5207*8
+_ShopTraderInventory_base EQU 5229*8
+_ShopTraderInventorySection_base EQU 5241*8
+_SimpleTimeStamper_base EQU 5245*8
+_SpeedGroup_base EQU 5249*8
+_SplashScreen_base EQU 5254*8
+_SquadManagementScreen_base EQU 5261*8
+_SquadManagementScreen_PortraitSquadCellView_base EQU 5277*8
+_SquadManagementScreen_PortraitSquadItemBox_base EQU 5283*8
+_SquadManagementScreen_SquadCellView_base EQU 5287*8
+_SquadManagementScreen_SquadData_base EQU 5294*8
+_SquadManagementScreen_SquadItemBox_base EQU 5298*8
+_StorageBuilding_base EQU 5302*8
+_StorageBuilding_ConsumptionItem_base EQU 5324*8
+_StringPair_base EQU 5328*8
+_Sword_base EQU 5334*8
+_TaskData_base EQU 5342*8
+_Tasker_base EQU 5372*8
+_TaskStateData_base EQU 5401*8
+_Terrain_base EQU 5403*8
+_ThreadClass_base EQU 5403*8
+_ThreadWannabe_base EQU 5415*8
+_TimeOfDay_base EQU 5421*8
+_TimerClass_base EQU 5449*8
+_TitleScreen_base EQU 5450*8
+_ToolTip_base EQU 5465*8
+_ToolTip_ToolTipLine_base EQU 5488*8
+_ToolTipDynamic_base EQU 5490*8
+_ToolTipFixed_base EQU 5494*8
+_ToolTipInventory_base EQU 5503*8
+_ToolTipStatic_base EQU 5513*8
+_TortureBuilding_base EQU 5521*8
+_Town_base EQU 5525*8
+_Town_NestSpot_base EQU 5599*8
+_TownBase_base EQU 5602*8
+_TownBase_DelayedSpawnMsg_base EQU 5686*8
+_TownBase_ResidentData_base EQU 5688*8
+_TownBase_TownPositionCacher_base EQU 5692*8
+_TownBuildingsManager_base EQU 5695*8
+_TownBuildingsManager_BuildingInfo_base EQU 5717*8
+_TownHandleContainerList_base EQU 5720*8
+_TradeCulture_base EQU 5723*8
+_TraderInventoryLayout_base EQU 5732*8
+_TransformWindow_base EQU 5737*8
+_TripleInt_base EQU 5761*8
+_TurretBuilding_base EQU 5767*8
+_TutorialGUI_base EQU 5796*8
+_TutorialGUI_TutorialGUILine_base EQU 5818*8
+_TutorialItem_base EQU 5821*8
+_TutorialpediaGUI_base EQU 5843*8
+_TutorialSubItem_base EQU 5855*8
+_UseableStuff_base EQU 5861*8
+_UtilityT_base EQU 5932*8
+_VisibleObjectInfo_base EQU 6034*8
+_WallBuilding_base EQU 6037*8
+_Weapon_base EQU 6063*8
+_Weather_base EQU 6077*8
+_WeatherInstance_base EQU 6080*8
+_WeatherRegion_base EQU 6101*8
+_WeatherRegion_Listener_base EQU 6117*8
+_WeatherSystem_base EQU 6118*8
+_WeatherSystem_FogValues_base EQU 6133*8
+_WeatherSystem_ZoneFog_base EQU 6135*8
+_WindGeneratorBuilding_base EQU 6140*8
+_WorldEventStateQuery_base EQU 6147*8
+_WorldEventStateQueryList_base EQU 6151*8
+_wraps_BaseLayout_base EQU 6156*8
+_YesNoMaybe_base EQU 6163*8
+_ZoneManager_base EQU 6174*8
+_ZoneManager_BiomeGroundEffects_base EQU 6254*8
+_ZoneManagerInterfaceT_base EQU 6255*8
+_ZoneMap_base EQU 6256*8
+_ZoneMap_StateT_base EQU 6301*8
+_ZoneMapHandleContainerList_base EQU 6302*8
+_ZoneSpacialGrid_base EQU 6309*8
+_static_functions_base EQU 6322*8
 
 
 DUMMY_FUNCTION proc 
@@ -383,6 +406,7 @@ INCLUDE functions/AppearanceManager_DataRangeVector.inc
 INCLUDE functions/AppearanceManager_Gender.inc
 INCLUDE functions/Armour.inc
 INCLUDE functions/BackpackInventoryLayout.inc
+INCLUDE functions/BlueprintItem.inc
 INCLUDE functions/Bounty.inc
 INCLUDE functions/BountyManager.inc
 INCLUDE functions/Building.inc
@@ -506,7 +530,14 @@ INCLUDE functions/GenericFixedInventoryLayout.inc
 INCLUDE functions/GenericInventoryLayout.inc
 INCLUDE functions/GlobalConstants.inc
 INCLUDE functions/GUIWindow.inc
+INCLUDE functions/GunClass.inc
+INCLUDE functions/GunClassPersonal.inc
+INCLUDE functions/GunClassTurret.inc
 INCLUDE functions/hand.inc
+INCLUDE functions/HandleContainerList.inc
+INCLUDE functions/HandleList.inc
+INCLUDE functions/HandleListBase.inc
+INCLUDE functions/HandleManager.inc
 INCLUDE functions/HavokCharacter.inc
 INCLUDE functions/hkBool.inc
 INCLUDE functions/hkContainerHeapAllocator.inc
@@ -534,6 +565,7 @@ INCLUDE functions/InventorySection.inc
 INCLUDE functions/InventorySectionGUI.inc
 INCLUDE functions/InventoryTraderGUI.inc
 INCLUDE functions/Item.inc
+INCLUDE functions/ItemHandleList.inc
 INCLUDE functions/iVector2.inc
 INCLUDE functions/KingOfRenderThread.inc
 INCLUDE functions/LevelEditor.inc
@@ -555,6 +587,7 @@ INCLUDE functions/MainBarGUI.inc
 INCLUDE functions/MainTabPortraitPlatoon.inc
 INCLUDE functions/ManagementScreen.inc
 INCLUDE functions/ManagementScreen_TechItemViewData.inc
+INCLUDE functions/MapItem.inc
 INCLUDE functions/MapScreen.inc
 INCLUDE functions/MapScreen_MapMarkerCharacter.inc
 INCLUDE functions/MapScreen_MapMarkerTown.inc
@@ -567,6 +600,7 @@ INCLUDE functions/MeshDataLookup.inc
 INCLUDE functions/MessageBoxManager.inc
 INCLUDE functions/MessageBoxManager_Box.inc
 INCLUDE functions/ModInfo.inc
+INCLUDE functions/MoneyItem.inc
 INCLUDE functions/MotionFilter.inc
 INCLUDE functions/NavInstance.inc
 INCLUDE functions/NavMesh.inc
@@ -576,6 +610,7 @@ INCLUDE functions/NavMeshGenerator.inc
 INCLUDE functions/NavMeshGenerator_Task.inc
 INCLUDE functions/NavMeshGenerator_TaskQueue.inc
 INCLUDE functions/NavMeshSeeds.inc
+INCLUDE functions/NestItem.inc
 INCLUDE functions/NewGameOptionsWindow.inc
 INCLUDE functions/NewGameWindow.inc
 INCLUDE functions/NxBox.inc
@@ -603,6 +638,7 @@ INCLUDE functions/PhysicsCollection_RotatingEnt.inc
 INCLUDE functions/PhysicsCollection_StaticEnt.inc
 INCLUDE functions/PhysicsInterface.inc
 INCLUDE functions/Platoon.inc
+INCLUDE functions/PlatoonHandleContainerList.inc
 INCLUDE functions/PlayerInterface.inc
 INCLUDE functions/PlayerInterface_AIOptions.inc
 INCLUDE functions/PortraitData.inc
@@ -632,6 +668,7 @@ INCLUDE functions/ResourceLoader_ResourceLoadRequestMesh.inc
 INCLUDE functions/ResourceLoader_ResourceLoadRequestTexture.inc
 INCLUDE functions/ResourceLoader_TextureArrayLoadData.inc
 INCLUDE functions/ResourceLoader_TextureLoadData.inc
+INCLUDE functions/RobotLimbItem.inc
 INCLUDE functions/RobotLimbs.inc
 INCLUDE functions/RootObject.inc
 INCLUDE functions/RootObjectBase.inc
@@ -647,6 +684,7 @@ INCLUDE functions/ScreenLabel.inc
 INCLUDE functions/ScreenLabelDebug.inc
 INCLUDE functions/ScreenLabelInterface.inc
 INCLUDE functions/Scythe_PhysicsClass.inc
+INCLUDE functions/Season.inc
 INCLUDE functions/SeenSomeone.inc
 INCLUDE functions/SelectionBox.inc
 INCLUDE functions/SenseItr.inc
@@ -654,6 +692,7 @@ INCLUDE functions/SensoryData.inc
 INCLUDE functions/SensoryData_SpottingPeopleMgr.inc
 INCLUDE functions/SensoryData_SpottingPeopleMgr_Spot.inc
 INCLUDE functions/Serialisable.inc
+INCLUDE functions/SeveredLimbItem.inc
 INCLUDE functions/ShopTrader.inc
 INCLUDE functions/ShopTraderInventory.inc
 INCLUDE functions/ShopTraderInventorySection.inc
@@ -694,6 +733,7 @@ INCLUDE functions/TownBase_ResidentData.inc
 INCLUDE functions/TownBase_TownPositionCacher.inc
 INCLUDE functions/TownBuildingsManager.inc
 INCLUDE functions/TownBuildingsManager_BuildingInfo.inc
+INCLUDE functions/TownHandleContainerList.inc
 INCLUDE functions/TradeCulture.inc
 INCLUDE functions/TraderInventoryLayout.inc
 INCLUDE functions/TransformWindow.inc
@@ -709,8 +749,13 @@ INCLUDE functions/UtilityT.inc
 INCLUDE functions/VisibleObjectInfo.inc
 INCLUDE functions/WallBuilding.inc
 INCLUDE functions/Weapon.inc
+INCLUDE functions/Weather.inc
+INCLUDE functions/WeatherInstance.inc
 INCLUDE functions/WeatherRegion.inc
 INCLUDE functions/WeatherRegion_Listener.inc
+INCLUDE functions/WeatherSystem.inc
+INCLUDE functions/WeatherSystem_FogValues.inc
+INCLUDE functions/WeatherSystem_ZoneFog.inc
 INCLUDE functions/WindGeneratorBuilding.inc
 INCLUDE functions/WorldEventStateQuery.inc
 INCLUDE functions/WorldEventStateQueryList.inc
@@ -721,6 +766,7 @@ INCLUDE functions/ZoneManager_BiomeGroundEffects.inc
 INCLUDE functions/ZoneManagerInterfaceT.inc
 INCLUDE functions/ZoneMap.inc
 INCLUDE functions/ZoneMap_StateT.inc
+INCLUDE functions/ZoneMapHandleContainerList.inc
 INCLUDE functions/ZoneSpacialGrid.inc
 INCLUDE functions/static_functions.inc
 
@@ -729,7 +775,7 @@ FUNC_END endp
 
 .data
 PUBLIC function_pointers
-function_pointers QWORD 6084 DUP(0)
+function_pointers QWORD 6331 DUP(0)
 
 ; must be directly after function_pointers
 INCLUDE globals.inc

@@ -342,6 +342,8 @@
     <ClInclude Include="Include\kenshi\gui\ToolTip.h" />
     <ClInclude Include="Include\kenshi\gui\TransformWindow.h" />
     <ClInclude Include="Include\kenshi\gui\TutorialGUI.h" />
+    <ClInclude Include="Include\kenshi\GunClass.h" />
+    <ClInclude Include="Include\kenshi\HandleManager.h" />
     <ClInclude Include="Include\kenshi\Havok.h" />
     <ClInclude Include="Include\kenshi\HavokCharacter.h" />
     <ClInclude Include="Include\kenshi\InstanceID.h" />
@@ -392,6 +394,7 @@
     <ClInclude Include="Include\kenshi\util\TripleInt.h" />
     <ClInclude Include="Include\kenshi\util\UtilityT.h" />
     <ClInclude Include="Include\kenshi\util\YesNoMaybe.h" />
+    <ClInclude Include="Include\kenshi\Weather.h" />
     <ClInclude Include="Include\kenshi\WorldEventStateQuery.h" />
     <ClInclude Include="Include\kenshi\ZoneManager.h" />
     <ClInclude Include="Include\mygui\common\baselayout\Attribute.h" />

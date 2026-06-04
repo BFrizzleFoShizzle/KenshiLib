@@ -237,3 +237,33 @@ public:
 	// no_addr class LockedArmour & operator=(const class LockedArmour & _a1);// public missing arg names
 	// virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };
+
+class RobotLimbItem : public Gear
+{
+public:
+	// Gear offset = 0x0, length = 0x228
+	ogre_unordered_map<StatsEnumerated, float>::type statMults; // 0x228 Member
+	// no_addr void RobotLimbItem(const class RobotLimbItem & _a1);// public missing arg names
+	RobotLimbItem(GameData* baseData, GameData* materialData, hand _handle, int _level);// public RVA = 0xCE290
+	RobotLimbItem* _CONSTRUCTOR(GameData* baseData, GameData* materialData, hand _handle, int _level);// public RVA = 0xCE290
+	float getStatMult(StatsEnumerated stat);// public RVA = 0xCD740
+	float maxHP; // 0x268 Member
+	float currentDamage; // 0x26C Member
+	float wearDamage; // 0x270 Member
+	float stunDamage; // 0x274 Member
+	int unarmedDamage; // 0x278 Member
+	virtual GameData* _serialise(GameDataContainer* container, itemType type) override;// public RVA = 0x760DF0 vtable offset = 0x0
+	GameData* _NV__serialise(GameDataContainer* container, itemType type);// public RVA = 0x760DF0 vtable offset = 0x0
+	virtual void _loadFromSerialise(GameDataContainer* container, GameData* state) override;// public RVA = 0x760F50 vtable offset = 0x0
+	void _NV__loadFromSerialise(GameDataContainer* container, GameData* state);// public RVA = 0x760F50 vtable offset = 0x0
+	virtual float getCraftTime() override;// public RVA = 0x2B8D20 vtable offset = 0x0
+	float _NV_getCraftTime();// public RVA = 0x2B8D20 vtable offset = 0x0
+	virtual void getTooltipData1(Ogre::vector<StringPair>::type& lines) override;// public RVA = 0x7A7E20 vtable offset = 0x0
+	void _NV_getTooltipData1(Ogre::vector<StringPair>::type& lines);// public RVA = 0x7A7E20 vtable offset = 0x0
+	virtual void getTooltipData2(Ogre::vector<StringPair>::type& lines) override;// public RVA = 0x79EAA0 vtable offset = 0x0
+	void _NV_getTooltipData2(Ogre::vector<StringPair>::type& lines);// public RVA = 0x79EAA0 vtable offset = 0x0
+	virtual ~RobotLimbItem();// public RVA = 0xD4D30 vtable offset = 0x0
+	void _DESTRUCTOR();// public RVA = 0xD4D30 vtable offset = 0x0
+	// no_addr class RobotLimbItem & operator=(const class RobotLimbItem & _a1);// public missing arg names
+	// virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
+};

@@ -78,7 +78,7 @@ KenshiLib::BinaryVersion kenshiVersion = HashToVersionMap.count(kenshiHash) > 0 
 bool KenshiLib::Init()
 {
     // Version number: [update breaking backwards-compatibility (hopefully never)].[update on Nexus].[update on GitHub]
-    DebugLog("KenshiLib 0.3.1");
+    DebugLog("KenshiLib 0.3.2");
     return InitRVAs();
 }
 // force override - used for hash mismatches, which can occur if the user has modified the executable

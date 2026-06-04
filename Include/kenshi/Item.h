@@ -5,8 +5,8 @@
 #include "util/TimeOfDay.h"
 #include "util/OgreUnordered.h"
 #include "util/iVector2.h"
-
-// TODO RobotLimbItem SeveredLimbItem NestItem BlueprintItem MapItem MoneyItem
+#include <ogre/OgreVector4.h>
+#include <ogre/OgreColourValue.h>
 
 class BuildingItemGroup;
 class InventorySection;
@@ -310,5 +310,132 @@ public:
 	ContainerItem* _CONSTRUCTOR(GameData* dat, GameData* mat, hand _handle);// protected RVA = 0x762600
 	Inventory* inventory; // 0x290 Member
 	// no_addr class ContainerItem & operator=(const class ContainerItem & _a1);// public missing arg names
+	// virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
+};
+
+class SeveredLimbItem : public Item
+{
+public:
+	// Item offset = 0x0, length = 0x1E8
+	// no_addr void SeveredLimbItem(const class SeveredLimbItem & _a1);// public missing arg names
+	SeveredLimbItem(GameData* baseData, const hand& handle);// public RVA = 0xCD630
+	SeveredLimbItem* _CONSTRUCTOR(GameData* baseData, const hand& handle);// public RVA = 0xCD630
+	void setupFromCharacter(Character* c, int limb, const Ogre::Vector3& force);// public RVA = 0xCECD0
+	virtual GameData* _serialise(GameDataContainer* container, itemType type) override;// public RVA = 0xCEFA0 vtable offset = 0x0
+	GameData* _NV__serialise(GameDataContainer* container, itemType type);// public RVA = 0xCEFA0 vtable offset = 0x0
+	virtual void _loadFromSerialise(GameDataContainer* container, GameData* state) override;// public RVA = 0xCF1F0 vtable offset = 0x0
+	void _NV__loadFromSerialise(GameDataContainer* container, GameData* state);// public RVA = 0xCF1F0 vtable offset = 0x0
+	virtual TimeOfDay getTimeout() const override;// public RVA = 0xD2330 vtable offset = 0x0
+	TimeOfDay _NV_getTimeout() const;// public RVA = 0xD2330 vtable offset = 0x0
+	virtual void destroyPhysical() override;// public RVA = 0xCD830 vtable offset = 0x0
+	void _NV_destroyPhysical();// public RVA = 0xCD830 vtable offset = 0x0
+	virtual void itemEntityCreated(Ogre::Entity* e) override;// protected RVA = 0xCF450 vtable offset = 0x0
+	void _NV_itemEntityCreated(Ogre::Entity* e);// protected RVA = 0xCF450 vtable offset = 0x0
+	Ogre::Vector3 limbScale; // 0x1E8 Member
+	Ogre::Vector4 skinTone; // 0x1F4 Member
+	Ogre::ColourValue blood; // 0x204 Member
+	Ogre::Vector3 impulse; // 0x214 Member
+	TimeOfDay timeout; // 0x220 Member
+	virtual ~SeveredLimbItem();// public RVA = 0xD2350 vtable offset = 0x0
+	void _DESTRUCTOR();// public RVA = 0xD2350 vtable offset = 0x0
+	// no_addr class SeveredLimbItem & operator=(const class SeveredLimbItem & _a1);// public missing arg names
+	// virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
+};
+
+class NestItem : public Item
+{
+public:
+	// Item offset = 0x0, length = 0x1E8
+	virtual itemType getClassType() const override;// public RVA = 0x76A8B0 vtable offset = 0x0
+	itemType _NV_getClassType() const;// public RVA = 0x76A8B0 vtable offset = 0x0
+	virtual std::string getModelName() override;// public RVA = 0x75F340 vtable offset = 0x0
+	std::string _NV_getModelName();// public RVA = 0x75F340 vtable offset = 0x0
+	// no_addr void NestItem(const class NestItem & _a1);// public missing arg names
+	NestItem(GameData* baseData, GameData* companyData, GameData* _materialData, hand _handle);// protected RVA = 0x75F2D0
+	NestItem* _CONSTRUCTOR(GameData* baseData, GameData* companyData, GameData* _materialData, hand _handle);// protected RVA = 0x75F2D0
+	virtual ~NestItem();// public RVA = 0x76A8C0 vtable offset = 0x0
+	void _DESTRUCTOR();// public RVA = 0x76A8C0 vtable offset = 0x0
+	// no_addr class NestItem & operator=(const class NestItem & _a1);// public missing arg names
+	// virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
+};
+
+class BlueprintItem : public Item
+{
+public:
+	// Item offset = 0x0, length = 0x1E8
+	virtual itemType getClassType() const override;// public RVA = 0x2D2C20 vtable offset = 0x0
+	itemType _NV_getClassType() const;// public RVA = 0x2D2C20 vtable offset = 0x0
+	virtual float getItemWeight() const override;// public RVA = 0x2D2C30 vtable offset = 0x0
+	float _NV_getItemWeight() const;// public RVA = 0x2D2C30 vtable offset = 0x0
+	virtual int getValueSingle(bool isPlayer) const override;// public RVA = 0x2D2C40 vtable offset = 0x0
+	int _NV_getValueSingle(bool isPlayer) const;// public RVA = 0x2D2C40 vtable offset = 0x0
+	GameData* getResearchData();// public RVA = 0x2B4A40
+	virtual void getTooltipData1(Ogre::vector<StringPair>::type& lines) override;// public RVA = 0x7AA1D0 vtable offset = 0x0
+	void _NV_getTooltipData1(Ogre::vector<StringPair>::type& lines);// public RVA = 0x7AA1D0 vtable offset = 0x0
+	virtual void getTooltipData2(Ogre::vector<StringPair>::type& lines) override;// public RVA = 0x79FAF0 vtable offset = 0x0
+	void _NV_getTooltipData2(Ogre::vector<StringPair>::type& lines);// public RVA = 0x79FAF0 vtable offset = 0x0
+	virtual void getGUIData(DatapanelGUI* datapanel, int category) override;// public RVA = 0x4971B0 vtable offset = 0x0
+	void _NV_getGUIData(DatapanelGUI* datapanel, int category);// public RVA = 0x4971B0 vtable offset = 0x0
+	bool learnResearch();// public RVA = 0x2B6120
+	int value; // 0x1E8 Member
+	// no_addr void BlueprintItem(const class BlueprintItem & _a1);// public missing arg names
+	BlueprintItem(GameData* _itemData, GameData* _techData, hand _handle);// protected RVA = 0x2B73F0
+	BlueprintItem* _CONSTRUCTOR(GameData* _itemData, GameData* _techData, hand _handle);// protected RVA = 0x2B73F0
+	virtual ~BlueprintItem();// protected RVA = 0x2D2CB0 vtable offset = 0x0
+	void _DESTRUCTOR();// protected RVA = 0x2D2CB0 vtable offset = 0x0
+	static void printResearch(Ogre::vector<StringPair>::type& lines, GameData* d, const std::string& listName, const std::string& displayName);// protected RVA = 0x799630
+	// no_addr class BlueprintItem & operator=(const class BlueprintItem & _a1);// public missing arg names
+	// virtual void * __vecDelDtor(unsigned int _a1) = 0;// protected vtable offset = 0x0 missing arg names
+};
+
+class MapItem : public Item
+{
+public:
+	// Item offset = 0x0, length = 0x1E8
+	virtual float getItemWeight() const override;// public RVA = 0x75C730 vtable offset = 0x0
+	float _NV_getItemWeight() const;// public RVA = 0x75C730 vtable offset = 0x0
+	virtual int getValueSingle(bool isPlayer) const override;// public RVA = 0x75C740 vtable offset = 0x0
+	int _NV_getValueSingle(bool isPlayer) const;// public RVA = 0x75C740 vtable offset = 0x0
+	virtual void getTooltipData1(Ogre::vector<StringPair>::type& lines) override;// public RVA = 0x7B3BF0 vtable offset = 0x0
+	void _NV_getTooltipData1(Ogre::vector<StringPair>::type& lines);// public RVA = 0x7B3BF0 vtable offset = 0x0
+	virtual void getTooltipData2(Ogre::vector<StringPair>::type& lines) override;// public RVA = 0x7A4960 vtable offset = 0x0
+	void _NV_getTooltipData2(Ogre::vector<StringPair>::type& lines);// public RVA = 0x7A4960 vtable offset = 0x0
+	int selectTowns();// public RVA = 0x75D770
+	bool consume();// public RVA = 0x75E340
+	int getTownsDiscovered() const;// public RVA = 0x70B9E0
+	virtual void _loadFromSerialise(GameDataContainer* container, GameData* state) override;// public RVA = 0x761440 vtable offset = 0x0
+	void _NV__loadFromSerialise(GameDataContainer* container, GameData* state);// public RVA = 0x761440 vtable offset = 0x0
+	virtual GameData* _serialise(GameDataContainer* container, itemType type) override;// public RVA = 0x761450 vtable offset = 0x0
+	GameData* _NV__serialise(GameDataContainer* container, itemType type);// public RVA = 0x761450 vtable offset = 0x0
+	// no_addr void MapItem(const class MapItem & _a1);// public missing arg names
+	MapItem(GameData* itemData, hand _handle);// protected RVA = 0x761310
+	MapItem* _CONSTRUCTOR(GameData* itemData, hand _handle);// protected RVA = 0x761310
+	virtual ~MapItem();// protected RVA = 0x75CB40 vtable offset = 0x0
+	void _DESTRUCTOR();// protected RVA = 0x75CB40 vtable offset = 0x0
+	void copy(MapItem* map);// protected RVA = 0x75C810
+	int value; // 0x1E8 Member
+	unsigned short townsDiscoveredCount; // 0x1EC Member
+	Ogre::FastArray<hand> townsHandles; // 0x1F0 Member
+	// no_addr class MapItem & operator=(const class MapItem & _a1);// public missing arg names
+	// virtual void * __vecDelDtor(unsigned int _a1) = 0;// protected vtable offset = 0x0 missing arg names
+};
+
+class MoneyItem : public Item
+{
+public:
+	// Item offset = 0x0, length = 0x1E8
+	virtual int getValueSingle(bool isPlayer) const override;// public RVA = 0x75E450 vtable offset = 0x0
+	int _NV_getValueSingle(bool isPlayer) const;// public RVA = 0x75E450 vtable offset = 0x0
+	virtual void getTooltipData1(Ogre::vector<StringPair>::type& lines) override;// public RVA = 0x7B4820 vtable offset = 0x0
+	void _NV_getTooltipData1(Ogre::vector<StringPair>::type& lines);// public RVA = 0x7B4820 vtable offset = 0x0
+	virtual void getTooltipData2(Ogre::vector<StringPair>::type& lines) override;// public RVA = 0x7A4970 vtable offset = 0x0
+	void _NV_getTooltipData2(Ogre::vector<StringPair>::type& lines);// public RVA = 0x7A4970 vtable offset = 0x0
+	bool consume() const;// public RVA = 0x75E4F0
+	// no_addr void MoneyItem(const class MoneyItem & _a1);// public missing arg names
+	MoneyItem(GameData* itemData, GameData* materialData, const hand& _handle);// protected RVA = 0x761460
+	MoneyItem* _CONSTRUCTOR(GameData* itemData, GameData* materialData, const hand& _handle);// protected RVA = 0x761460
+	virtual ~MoneyItem();// public RVA = 0x76A970 vtable offset = 0x0
+	void _DESTRUCTOR();// public RVA = 0x76A970 vtable offset = 0x0
+	// no_addr class MoneyItem & operator=(const class MoneyItem & _a1);// public missing arg names
 	// virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };

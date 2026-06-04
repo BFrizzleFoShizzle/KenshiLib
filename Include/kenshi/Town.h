@@ -5,6 +5,7 @@
 #include "Building/Building.h"
 #include "util/TagsClass.h"
 #include "util/TimeOfDay.h"
+#include "util/iVector2.h"
 // TODO move FactoryCallbackInterface
 #include "PlayerInterface.h"
 
@@ -490,5 +491,83 @@ public:
     float overrideRange; // 0x51C Member
     float townRangeMultiplier; // 0x520 Member
     // no_addr class Town & operator=(const class Town & _a1);// public missing arg names
+    // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
+};
+
+class AreaSector;
+class TownNull;
+
+class TownList : public RootObjectContainer
+{
+public:
+    // RootObjectContainer offset = 0x0, length = 0x68
+    // Typedef        : TownsSet
+    // Typedef        : TownsHandleList
+    // no_addr void TownList(const class TownList & _a1);// public missing arg names
+    TownList();// public RVA = 0x92A390
+    TownList* _CONSTRUCTOR();// public RVA = 0x92A390
+    virtual ~TownList();// public RVA = 0x92A520 vtable offset = 0x0
+    void _DESTRUCTOR();// public RVA = 0x92A520 vtable offset = 0x0
+    virtual bool addActiveObject(RootObject* b) override;// public RVA = 0x92BEE0 vtable offset = 0x0
+    bool _NV_addActiveObject(RootObject* b);// public RVA = 0x92BEE0 vtable offset = 0x0
+    void updateTownCoverage(TownBase* n);// public RVA = 0x928590
+    virtual void getSelectedObjects(lektor<RootObject*>& out, itemType type, bool selectedOnly) override;// public RVA = 0x9276A0 vtable offset = 0x0
+    void _NV_getSelectedObjects(lektor<RootObject*>& out, itemType type, bool selectedOnly);// public RVA = 0x9276A0 vtable offset = 0x0
+    void _clearAll();// public RVA = 0x926AB0
+    void _resetGame();// public RVA = 0x92A100
+    void destroyAllTheNests();// public RVA = 0x92ADF0
+    void destroy(TownBase* t);// public RVA = 0x929C10
+    Town* getTown(const std::string& instanceID);// public RVA = 0x928CF0
+    void getTownsInArea(lektor<Town*>& out, AreaSector* area);// public RVA = 0x927450
+    Town* getTownBySID(const std::string& name);// public RVA = 0x927A50
+    Town* getNearestPlayerTown(const Ogre::Vector3& position, bool includePlayerResidenceTowns, float maxDistance) const;// public RVA = 0x926690
+    Town* getNearestTown(const Ogre::Vector3& pos, Faction* townOwner, Town* except, Faction* myFaction, TownType type) const;// public RVA = 0x926760
+    Town* getNearestTownWithBuildingDesignation(BuildingDesignation what, const Ogre::Vector3& pos, Faction* townFactionWanted, Town* except, Faction* notEnemiesOf, TownType type, float maxDistanceSquared);// public RVA = 0x9378E0
+    Nest* getNearestNest(const Ogre::Vector3& pos, Faction* f, TownBase* except) const;// public RVA = 0x926320
+    TownBase* getNearest(const Ogre::Vector3& pos, Faction* f, TownBase* except) const;// public RVA = 0x926400
+    TownBase* getNearestWithinItsRadius(const Ogre::Vector3& position, bool skipPlayerTowns) const;// public RVA = 0x9270E0
+    void getNearestInOrder(lektor<TownBase*>& out, Ogre::Vector3 pos, Faction* f, int maxNumToGet, TownBase* except);// public RVA = 0x927B40
+    void getNearestInOrderWithResidentFaction(lektor<TownBase*>& out, Ogre::Vector3 pos, Faction* f, int maxNumToGet, TownBase* except);// public RVA = 0x925B70
+    Town* getRetreatTown(const Ogre::Vector3& pos, Faction* owner, Town* except);// public RVA = 0x9261F0
+    Town* createNewPlayerTown(const Ogre::Vector3& pos);// public RVA = 0x933660
+    float getDistToNearestTown(const Ogre::Vector3& pos, Town* except);// public RVA = 0x9272A0
+    float getSquaredDistToNearestTown(const Ogre::Vector3& pos, Town* except);// public RVA = 0x9268B0
+    Town* getNearishTown(Faction* myFaction, const Ogre::Vector3& pos, Faction* owner, TownBase* except, bool publicOnly, unsigned int types);// public RVA = 0x92AE30
+    lektor<RootObject*>& getAllTowns();// public RVA = 0xB85F0
+    void getAllTownsOf(lektor<TownBase*>& out, Faction* f);// public RVA = 0x9275B0
+    void getAllTownsOf(lektor<Town*>& out, Faction* f);// public RVA = 0x927510
+    void getAllTownsInBiome(lektor<Town*>& out, AreaBiomeGroup* biome, TownType type);// public RVA = 0x9272C0
+    void getAllTowsByGameData(lektor<Town*>& towns, GameData* data);// public RVA = 0x927380
+    TownBase* getNullTown() const;// public RVA = 0x925B90
+    virtual bool update() override;// public RVA = 0x92C0A0 vtable offset = 0x0
+    bool _NV_update();// public RVA = 0x92C0A0 vtable offset = 0x0
+    void updateTownsDiscovery();// public RVA = 0x92DF00
+    void setAllTownsDebugVisible(bool on);// public RVA = 0x926A40
+    virtual void saveToDisk(bool levelEditor, std::string forceFilename);// public RVA = 0x949B70 vtable offset = 0x40
+    void _NV_saveToDisk(bool levelEditor, std::string forceFilename);// public RVA = 0x949B70 vtable offset = 0x40
+    virtual bool loadFromDisk(bool force, Serialisable* extra) override;// public RVA = 0x925B80 vtable offset = 0x0
+    bool _NV_loadFromDisk(bool force, Serialisable* extra);// public RVA = 0x925B80 vtable offset = 0x0
+    void saveState(GameDataContainer* container);// public RVA = 0x36B1F0
+    void loadState(GameDataContainer* container, bool isImportSoPlayerOnly);// public RVA = 0x371DB0
+    void loadStateDiscovery(GameDataContainer* container, bool importOverride);// public RVA = 0x372040
+    void loadLevelData(bool newGame);// public RVA = 0x3723A0
+    void _saveLevelData(GameDataContainer* container, const std::string& mod);// public RVA = 0x36CC30
+    void saveUniqueTownsAndNests(GameDataContainer* container);// public RVA = 0x928F10
+    void listUniqueTownsFromPlayerOwnership();// public RVA = 0x9296D0
+    void loadAllTowns_worldInit(GameDataContainer* saveSource);// public RVA = 0x933970
+    lektor<RootObject*> uniqueTowns; // 0x68 Member
+    void addNest(RootObject* n);// public RVA = 0x92BD00
+    lektor<RootObject*> nests; // 0x80 Member
+    lektor<Town*> deletedTowns; // 0x98 Member
+    bool newTownsDiscovered; // 0xB0 Member
+    void reassessTownPositions(TownBase* t);// public RVA = 0x54C900
+    lektor<hand> townsByZone[0x40][0x40]; // 0xB8 Member
+    const ogre_unordered_set<TownBase*>::type& getActiveTowns() const;// public RVA = 0x925E40
+    void mergePlayerTowns(Town* a, Town* b);// public RVA = 0x930090
+    void _getNearest(const iVector2& sector, TownBase*& nearestTown, float& nearestDistance, const Ogre::Vector3& position, bool skipPlayerTowns) const;// protected RVA = 0x926560
+    ogre_unordered_set<TownBase*>::type activeTowns; // 0x180B8 Member
+    TownNull* noTown; // 0x180F8 Member
+    // no_addr class TownList & operator=(const class TownList & _a1);// public missing arg names
+    // no_addr void __local_vftable_ctor_closure();// public
     // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };
