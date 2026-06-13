@@ -996,3 +996,22 @@ enum MapZoomLevel
     ZOOM_MAX,
     ZOOM_CHARACTERS
 };
+
+
+namespace RagdollPart
+{
+    enum Enum
+    {
+        NONE,
+        WHOLE,
+        RIGHT_ARM,
+        LEFT_ARM = 0x4,
+        HEAD = 0x8,
+        RIGHT_LEG = 0x10,
+        LEFT_LEG = 0x20,
+        CARRY_MODE = 0x800,
+        ARMS = 0x6,
+        LEGS = 0x30,
+        ALL = 0xFFFF8000
+    };
+};

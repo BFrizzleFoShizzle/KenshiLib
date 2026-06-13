@@ -49,6 +49,9 @@
     <Filter Include="Header Files\kenshi\building">
       <UniqueIdentifier>{973aa79e-5ec3-454c-9477-613d27bd87a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\kenshi\animation">
+      <UniqueIdentifier>{4fcf45b9-3c66-4557-9185-687db5b83d0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\core\RVA.cpp">
@@ -2544,6 +2547,33 @@
       <Filter>Header Files\kenshi</Filter>
     </ClInclude>
     <ClInclude Include="Include\kenshi\GunClass.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\SharedKing.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\MedianFilter.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\Animation\AnimationClass.h">
+      <Filter>Header Files\kenshi\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\Animation\AnimationClassAnimal.h">
+      <Filter>Header Files\kenshi\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\Animation\AnimationClassHuman.h">
+      <Filter>Header Files\kenshi\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\Animation\AnimationEvent.h">
+      <Filter>Header Files\kenshi\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\Animation\RagdollAnimation.h">
+      <Filter>Header Files\kenshi\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\ZoneMapContent.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\ZoneSmell.h">
       <Filter>Header Files\kenshi</Filter>
     </ClInclude>
   </ItemGroup>

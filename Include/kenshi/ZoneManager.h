@@ -445,3 +445,33 @@ public:
     // no_addr class ZoneManager & operator=(const class ZoneManager & _a1);// public missing arg names
     // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
 };
+
+class RealWorldEditableImage;
+
+class ZoneMapOverlay : public Ogre::GeneralAllocatedObject
+{
+public:
+    // Ogre::AllocatedObject<Ogre::CategorisedAllocPolicy<0> > offset = 0x0, length = 0x1
+    // Typedef        : MaterialRefMap
+    // no_addr void ZoneMapOverlay(const class ZoneMapOverlay & _a1);// public missing arg names
+    ZoneMapOverlay(const iVector2& p);// public RVA = 0xA12E00
+    ZoneMapOverlay* _CONSTRUCTOR(const iVector2& p);// public RVA = 0xA12E00
+    ~ZoneMapOverlay();// public RVA = 0xA131E0
+    void _DESTRUCTOR();// public RVA = 0xA131E0
+    void enable();// public RVA = 0xA105C0
+    void disable();// public RVA = 0xA0A2C0
+    bool loadData();// public RVA = 0xA0A6E0
+    std::string getName() const;// public RVA = 0xA0A710
+    bool isEnabled() const;// public RVA = 0x780950
+    void addMaterial(const Ogre::SharedPtr<Ogre::Material>& material);// public RVA = 0xA13260
+    void removeMaterial(const Ogre::SharedPtr<Ogre::Material>& material);// public RVA = 0xA12CC0
+    const iVector2& getIndex() const;// public RVA = 0xA19A60
+    RealWorldEditableImage* getImage() const;// public RVA = 0x780960
+    std::string colourMap; // 0x0 Member
+    iVector2 index; // 0x28 Member
+    RealWorldEditableImage* image; // 0x30 Member
+    boost::unordered::unordered_map<Ogre::SharedPtr<Ogre::Material>, unsigned short, boost::hash<Ogre::SharedPtr<Ogre::Material> >, std::equal_to<Ogre::SharedPtr<Ogre::Material> >, Ogre::STLAllocator<std::pair<Ogre::SharedPtr<Ogre::Material> const, unsigned short>, Ogre::GeneralAllocPolicy > > materials; // 0x38 Member
+    bool enabled; // 0x78 Member
+    // no_addr class ZoneMapOverlay & operator=(const class ZoneMapOverlay & _a1);// public missing arg names
+    // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
+};

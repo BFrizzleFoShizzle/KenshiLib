@@ -12,6 +12,7 @@ class GameData;
 class GameDataContainer;
 class ForgottenGUI;
 class KingOfRenderThread;
+class SharedKing;
 
 // TODO
 namespace FoliageSystem
@@ -32,3 +33,4 @@ __declspec(dllimport) OptionsHolder* options;
 __declspec(dllimport) ForgottenGUI* gui;
 __declspec(dllimport) KingOfRenderThread* au;
 __declspec(dllimport) std::locale* globalLocale;
+__declspec(dllimport) SharedKing* shou;

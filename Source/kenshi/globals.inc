@@ -34,3 +34,8 @@ QWORD 0
 ?globalLocale@@3PEAVlocale@std@@EA proc EXPORT
 QWORD 0
 ?globalLocale@@3PEAVlocale@std@@EA endp
+
+; class SharedKing shou; // RVA = 0x2131008 Global
+?shou@@3PEAVSharedKing@@EA proc EXPORT
+QWORD 0
+?shou@@3PEAVSharedKing@@EA endp

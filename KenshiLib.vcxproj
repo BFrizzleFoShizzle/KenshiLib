@@ -254,6 +254,11 @@
     <ClInclude Include="Include\core\Scanner.h" />
     <ClInclude Include="Include\Debug.h" />
     <ClInclude Include="Include\Defines.h" />
+    <ClInclude Include="Include\kenshi\Animation\AnimationClass.h" />
+    <ClInclude Include="Include\kenshi\Animation\AnimationClassAnimal.h" />
+    <ClInclude Include="Include\kenshi\Animation\AnimationClassHuman.h" />
+    <ClInclude Include="Include\kenshi\Animation\AnimationEvent.h" />
+    <ClInclude Include="Include\kenshi\Animation\RagdollAnimation.h" />
     <ClInclude Include="Include\kenshi\Appearance.h" />
     <ClInclude Include="Include\kenshi\AppearanceManager.h" />
     <ClInclude Include="Include\kenshi\Bounty.h" />
@@ -354,6 +359,7 @@
     <ClInclude Include="Include\kenshi\KingOfRenderThread.h" />
     <ClInclude Include="Include\kenshi\LocaleInfo.h" />
     <ClInclude Include="Include\kenshi\Logger.h" />
+    <ClInclude Include="Include\kenshi\MedianFilter.h" />
     <ClInclude Include="Include\kenshi\MedicalSystem.h" />
     <ClInclude Include="Include\kenshi\MeshDataLookup.h" />
     <ClInclude Include="Include\kenshi\ModInfo.h" />
@@ -376,6 +382,7 @@
     <ClInclude Include="Include\kenshi\SaveInfo.h" />
     <ClInclude Include="Include\kenshi\SaveManager.h" />
     <ClInclude Include="Include\kenshi\SensoryData.h" />
+    <ClInclude Include="Include\kenshi\SharedKing.h" />
     <ClInclude Include="Include\kenshi\ShopTrader.h" />
     <ClInclude Include="Include\kenshi\ShopTraderInventory.h" />
     <ClInclude Include="Include\kenshi\Tasker.h" />
@@ -397,6 +404,8 @@
     <ClInclude Include="Include\kenshi\Weather.h" />
     <ClInclude Include="Include\kenshi\WorldEventStateQuery.h" />
     <ClInclude Include="Include\kenshi\ZoneManager.h" />
+    <ClInclude Include="Include\kenshi\ZoneMapContent.h" />
+    <ClInclude Include="Include\kenshi\ZoneSmell.h" />
     <ClInclude Include="Include\mygui\common\baselayout\Attribute.h" />
     <ClInclude Include="Include\mygui\common\baselayout\BaseLayout.h" />
     <ClInclude Include="Include\mygui\common\baselayout\WrapsAttribute.h" />

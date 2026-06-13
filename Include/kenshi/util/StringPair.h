@@ -26,3 +26,19 @@ public:
     // no_addr void __local_vftable_ctor_closure();// public
     // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };
+
+class StringValuePair
+{
+public:
+    StringValuePair(const StringValuePair& a);// public RVA = 0x528310
+    StringValuePair* _CONSTRUCTOR(const StringValuePair& a);// public RVA = 0x528310
+    StringValuePair(const std::string& a, float v);// public RVA = 0x65B1E0
+    StringValuePair* _CONSTRUCTOR(const std::string& a, float v);// public RVA = 0x65B1E0
+    std::string s; // 0x0 Member
+    float val; // 0x28 Member
+    // no_addr const class StringValuePair & operator=(const class StringValuePair & _a1);// public missing arg names
+    bool operator<(const StringValuePair& p) const;// public RVA = 0x643150
+    ~StringValuePair();// public RVA = 0x526770
+    void _DESTRUCTOR();// public RVA = 0x526770
+    // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
+};
