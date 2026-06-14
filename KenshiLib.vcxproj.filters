@@ -52,6 +52,12 @@
     <Filter Include="Header Files\kenshi\animation">
       <UniqueIdentifier>{4fcf45b9-3c66-4557-9185-687db5b83d0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\kenshi\AI">
+      <UniqueIdentifier>{cc9609eb-f192-4a6a-a584-919412b73a4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\kenshi\combat">
+      <UniqueIdentifier>{3b10ed98-d8df-4d1a-b114-ce7bdff11dbc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\core\RVA.cpp">
@@ -2261,9 +2267,6 @@
     <ClInclude Include="Include\kenshi\CharMovement.h">
       <Filter>Header Files\kenshi</Filter>
     </ClInclude>
-    <ClInclude Include="Include\kenshi\CombatTechniqueData.h">
-      <Filter>Header Files\kenshi</Filter>
-    </ClInclude>
     <ClInclude Include="Include\kenshi\SensoryData.h">
       <Filter>Header Files\kenshi</Filter>
     </ClInclude>
@@ -2272,9 +2275,6 @@
     </ClInclude>
     <ClInclude Include="Include\kenshi\util\TripleInt.h">
       <Filter>Header Files\kenshi\util</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\kenshi\CombatClass.h">
-      <Filter>Header Files\kenshi</Filter>
     </ClInclude>
     <ClInclude Include="Include\kenshi\ResourceLoader.h">
       <Filter>Header Files\kenshi</Filter>
@@ -2574,6 +2574,33 @@
       <Filter>Header Files\kenshi</Filter>
     </ClInclude>
     <ClInclude Include="Include\kenshi\ZoneSmell.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\AI\AI.h">
+      <Filter>Header Files\kenshi\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\AI\AITaskSystem.h">
+      <Filter>Header Files\kenshi\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\AI\AIPackage.h">
+      <Filter>Header Files\kenshi\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\AI\AIEventClass.h">
+      <Filter>Header Files\kenshi\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\combat\CombatState.h">
+      <Filter>Header Files\kenshi\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\combat\CombatTechniqueData.h">
+      <Filter>Header Files\kenshi\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\combat\RangedCombatClass.h">
+      <Filter>Header Files\kenshi\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\combat\CombatClass.h">
+      <Filter>Header Files\kenshi\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\StateBroadcastData.h">
       <Filter>Header Files\kenshi</Filter>
     </ClInclude>
   </ItemGroup>

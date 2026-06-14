@@ -253,3 +253,67 @@ public:
     // no_addr class CombatClass & operator=(const class CombatClass & _a1);// public missing arg names
     // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };
+
+class CombatClassPlayer : public CombatClass
+{
+public:
+    // CombatClass offset = 0x0, length = 0x2B8
+    // no_addr void CombatClassPlayer(const class CombatClassPlayer & _a1);// public missing arg names
+    // no_addr void CombatClassPlayer(class CharMovement * _a1, class AI * _a2, class AnimationClass * _a3, class Character * _a4, class CharStats * _a5, class MedicalSystem * _a6);// private missing arg names
+    virtual ~CombatClassPlayer() = 0;// private vtable offset = 0x0
+    //void _DESTRUCTOR() = 0;// private vtable offset = 0x0
+    virtual swordStateEnum whoAttacksYouOrMe(Character* _a1, float _a2, float& _a3) override = 0;// public vtable offset = 0x0 missing arg names
+    virtual void update() = 0;// public vtable offset = 0x80
+    // no_addr class CombatClassPlayer & operator=(const class CombatClassPlayer & _a1);// public missing arg names
+    // virtual void * __vecDelDtor(unsigned int _a1) = 0;// private vtable offset = 0x0 missing arg names
+};
+
+class ConstantTracerT;
+
+class CombatClassAI : public CombatClass
+{
+public:
+    // CombatClass offset = 0x0, length = 0x2B8
+    // no_addr void CombatClassAI(const class CombatClassAI & _a1);// public missing arg names
+    CombatClassAI(CharMovement* m, AI* a, AnimationClass* an, Character* c, CharStats* s, MedicalSystem* med);// private RVA = 0x60BE10
+    CombatClassAI* _CONSTRUCTOR(CharMovement* m, AI* a, AnimationClass* an, Character* c, CharStats* s, MedicalSystem* med);// private RVA = 0x60BE10
+    virtual ~CombatClassAI();// private RVA = 0x60BEA0 vtable offset = 0x0
+    void _DESTRUCTOR();// private RVA = 0x60BEA0 vtable offset = 0x0
+    virtual void update(float frameTIME) override;// public RVA = 0x60CF20 vtable offset = 0x0
+    void _NV_update(float frameTIME);// public RVA = 0x60CF20 vtable offset = 0x0
+    virtual void periodicUpdate(float time) override;// public RVA = 0x60CED0 vtable offset = 0x0
+    void _NV_periodicUpdate(float time);// public RVA = 0x60CED0 vtable offset = 0x0
+    virtual bool initCombatMode(const hand& subject, int end, bool focusedTargetMode) override;// public RVA = 0x667A60 vtable offset = 0x0
+    bool _NV_initCombatMode(const hand& subject, int end, bool focusedTargetMode);// public RVA = 0x667A60 vtable offset = 0x0
+    virtual bool isAI() const override;// public RVA = 0x60C3D0 vtable offset = 0x0
+    bool _NV_isAI() const;// public RVA = 0x60C3D0 vtable offset = 0x0
+    virtual hand hasFocusedTarget() override;// public RVA = 0x60C3E0 vtable offset = 0x0
+    hand _NV_hasFocusedTarget();// public RVA = 0x60C3E0 vtable offset = 0x0
+    ConstantTracerT* tracer; // 0x2B8 Member
+    void tracerUpdate();// private RVA = 0x60C650
+    bool targetPathBlocked() const;// private RVA = 0x2B2610
+    bool targetTraceBlocked; // 0x2C0 Member
+    hand focusedTarget; // 0x2C8 Member
+    bool reFocusableMode; // 0x2E8 Member
+    bool decisionState();// private RVA = 0x60C130
+    virtual bool startupState() override;// private RVA = 0x60C930 vtable offset = 0x0
+    bool _NV_startupState();// private RVA = 0x60C930 vtable offset = 0x0
+    bool isInMeiDistance();// private RVA = 0x60BEF0
+    void waitState();// private RVA = 0x60C0C0
+    void circleState();// private RVA = 0x60C0F0
+    void hesitateState();// private RVA = 0x60C120
+    virtual bool attackState() override;// private RVA = 0x60A1F0 vtable offset = 0x0
+    bool _NV_attackState();// private RVA = 0x60A1F0 vtable offset = 0x0
+    virtual bool blockState(bool stumbleBlocking) override;// private RVA = 0x609A10 vtable offset = 0x0
+    bool _NV_blockState(bool stumbleBlocking);// private RVA = 0x609A10 vtable offset = 0x0
+    virtual void informOfFreeAttackSlot(Character* who) override;// private RVA = 0x664EA0 vtable offset = 0x0
+    void _NV_informOfFreeAttackSlot(Character* who);// private RVA = 0x664EA0 vtable offset = 0x0
+    virtual swordStateEnum whoAttacksYouOrMe(Character* who, float opponentAttackChance, float& returnValue) override;// private RVA = 0x6662B0 vtable offset = 0x0
+    swordStateEnum _NV_whoAttacksYouOrMe(Character* who, float opponentAttackChance, float& returnValue);// private RVA = 0x6662B0 vtable offset = 0x0
+    Character* chooseAttackTarget();// private RVA = 0x666760
+    double targetLastChangedTimer; // 0x2F0 Member
+    virtual bool gotMoreImportantThingsToDoThanFightingYou(Character* who) override;// private RVA = 0x607BC0 vtable offset = 0x0
+    bool _NV_gotMoreImportantThingsToDoThanFightingYou(Character* who);// private RVA = 0x607BC0 vtable offset = 0x0
+    // no_addr class CombatClassAI & operator=(const class CombatClassAI & _a1);// public missing arg names
+    // virtual void * __vecDelDtor(unsigned int _a1) = 0;// private vtable offset = 0x0 missing arg names
+};

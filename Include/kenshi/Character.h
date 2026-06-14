@@ -107,15 +107,6 @@ enum SoundRange
     SOUNDRANGE_ALWAYS = 0x0
 };
 
-enum SquadMemberType
-{
-    SQUAD_1,
-    SQUAD_2,
-    SQUAD_LEADER,
-    SQUAD_SIGNALS_PLAN,
-    SQUAD_SLAVE
-};
-
 enum CharacterMessage
 {
     ATTACKING_MELEE

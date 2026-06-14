@@ -254,6 +254,10 @@
     <ClInclude Include="Include\core\Scanner.h" />
     <ClInclude Include="Include\Debug.h" />
     <ClInclude Include="Include\Defines.h" />
+    <ClInclude Include="Include\kenshi\AI\AI.h" />
+    <ClInclude Include="Include\kenshi\AI\AIEventClass.h" />
+    <ClInclude Include="Include\kenshi\AI\AIPackage.h" />
+    <ClInclude Include="Include\kenshi\AI\AITaskSystem.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClass.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClassAnimal.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClassHuman.h" />
@@ -286,8 +290,10 @@
     <ClInclude Include="Include\kenshi\CharBody.h" />
     <ClInclude Include="Include\kenshi\CharMovement.h" />
     <ClInclude Include="Include\kenshi\CharStats.h" />
-    <ClInclude Include="Include\kenshi\CombatClass.h" />
-    <ClInclude Include="Include\kenshi\CombatTechniqueData.h" />
+    <ClInclude Include="Include\kenshi\combat\CombatClass.h" />
+    <ClInclude Include="Include\kenshi\combat\CombatState.h" />
+    <ClInclude Include="Include\kenshi\combat\CombatTechniqueData.h" />
+    <ClInclude Include="Include\kenshi\combat\RangedCombatClass.h" />
     <ClInclude Include="Include\kenshi\Damages.h" />
     <ClInclude Include="Include\kenshi\Dialogue.h" />
     <ClInclude Include="Include\kenshi\Enums.h" />
@@ -385,6 +391,7 @@
     <ClInclude Include="Include\kenshi\SharedKing.h" />
     <ClInclude Include="Include\kenshi\ShopTrader.h" />
     <ClInclude Include="Include\kenshi\ShopTraderInventory.h" />
+    <ClInclude Include="Include\kenshi\StateBroadcastData.h" />
     <ClInclude Include="Include\kenshi\Tasker.h" />
     <ClInclude Include="Include\kenshi\Terrain.h" />
     <ClInclude Include="Include\kenshi\Town.h" />
