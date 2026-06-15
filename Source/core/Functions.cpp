@@ -136,7 +136,7 @@ intptr_t KenshiLib::GetRealAddress(void* fun)
         str << L"Incorrect address in KenshiLib::GetRealAddress()\n";
         if (moduleBase == callerBase)
             // caller is hooking themselves
-            str << L"The address you provided appears to be in your own module, try disabling \"whole program optimization\" in your compilation settings.\n";
+            str << L"The address you provided appears to be in your own module, try enabling \"whole program optimization\" in your compilation settings.\n";
         if (moduleName == "KenshiLib.dll")
             str << L"The function you are trying to hook appears to be a non-stub KenshiLib function. This is either a KenshiLib bug or you're trying to hook an internal KenshiLib function.\n";
         str << L"Function address: " << std::wstring(moduleName.begin(), moduleName.end()) << "+0x" << std::hex << offset << std::endl;
