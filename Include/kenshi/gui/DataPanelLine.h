@@ -1,3 +1,5 @@
+#pragma once
+
 #include <mygui/MyGUI_TextBox.h>
 #include <kenshi/util/StringPair.h>
 #include <kenshi/util/lektor.h>

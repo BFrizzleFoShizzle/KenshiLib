@@ -1,3 +1,4 @@
+#pragma once
 
 #include <ogre/OgreMemoryAllocatorConfig.h>
 #include <ogre/OgreVector3.h>
