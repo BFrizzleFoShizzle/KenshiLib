@@ -12,6 +12,7 @@ class ToolTip;
 class DatapanelGUI;
 class PortraitMainItemBox;
 class DatapanelGUI;
+class MainBarGUI;
 
 // TODO move?
 class MainTabPortraitPlatoon : public Ogre::GeneralAllocatedObject
