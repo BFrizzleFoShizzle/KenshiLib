@@ -27,23 +27,6 @@ class PatrolInfo;
 class AreaBiomeGroup;
 class AreaSector;
 
-// TODO move?
-enum BuildingDesignation
-{
-    BD_NONE,
-    BD_SHOP,
-    BD_BARRACKS,
-    BD_BAR,
-    BD_HOSPITAL,
-    BD_ARMOURY,
-    BD_TREASURE,
-    BD_PRISON,
-    BD_HQ,
-    BD_RESIDENTIAL,
-    BD_SLAVE_STORAGE,
-    BD_RESIDENTIAL_SMALL
-};
-
 enum BuildingFunction;
 
 class Ownerships
