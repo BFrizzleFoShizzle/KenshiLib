@@ -14,6 +14,7 @@ class DatapanelGUI;
 class SoundPool;
 class ConstantTracerT;
 class GunClassTurret;
+class GunClassPersonal;
 
 class GunClass : public Ogre::GeneralAllocatedObject
 {

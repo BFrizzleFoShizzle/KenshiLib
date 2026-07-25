@@ -4,10 +4,10 @@
 #include <ogre/OgreMemoryAllocatorConfig.h>
 #include <ogre/OgreVector3.h>
 #include <ogre/OgreQuaternion.h>
-#include "Enums.h"
-#include "util/lektor.h"
-#include "util/hand.h"
-#include "util/OgreUnordered.h"
+#include "../Enums.h"
+#include "../util/lektor.h"
+#include "../util/hand.h"
+#include "../util/OgreUnordered.h"
 
 class Character;
 class Damages;

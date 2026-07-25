@@ -27,13 +27,13 @@ public:
     struct Node
     {
         T value; // 0x0 Member
-        MessageQueue<T>::Node* next; // 0x8 Member
+        Node* next; // 0x8 Member
         // no_addr void Node(struct HavokCharacterMessage * const & _a1);// public missing arg names
     };
     int s; // 0x0 Member
-    MessageQueue<T>::Node* root; // 0x8 Member
-    MessageQueue<T>::Node* split; // 0x10 Member
-    MessageQueue<T>::Node* back; // 0x18 Member
+    Node* root; // 0x8 Member
+    Node* split; // 0x10 Member
+    Node* back; // 0x18 Member
     boost::shared_mutex mutex; // 0x20 Member
     // no_addr void MessageQueue<HavokCharacterMessage *>(const class MessageQueue<HavokCharacterMessage *> & _a1);// public missing arg names
     // no_addr void MessageQueue<HavokCharacterMessage *>();// public

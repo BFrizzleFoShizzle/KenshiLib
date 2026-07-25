@@ -4,6 +4,7 @@
 
 class AITaskSytem;
 class function;
+class AI;
 
 // TODO move?
 class StateFunctionList

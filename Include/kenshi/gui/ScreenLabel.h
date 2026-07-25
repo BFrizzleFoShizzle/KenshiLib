@@ -3,6 +3,7 @@
 #include <ogre/OgreVector3.h>
 #include <kenshi/util/hand.h>
 #include <mygui/MyGUI_Colour.h>
+#include <mygui/common/baselayout/BaseLayout.h>
 
 class ScreenLabelInterface : public Ogre::GeneralAllocatedObject
 {

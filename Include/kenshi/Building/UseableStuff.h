@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Building.h"
+#include <mygui/MyGUI_Widget.h>
+#include "../gui/InventoryGUI.h"
 
 class GenericInventoryLayout : public InventoryLayout
 {

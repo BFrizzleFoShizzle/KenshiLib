@@ -8,6 +8,8 @@
 #include "Enums.h"
 
 class GameData;
+class WeatherRegion;
+class Weather;
 
 class WeatherInstance : public Ogre::GeneralAllocatedObject
 {
@@ -59,6 +61,7 @@ public:
 
 class AreaBiomeGroup;
 class EffectGroup;
+class Season;
 
 class WeatherRegion : public Ogre::GeneralAllocatedObject
 {
@@ -114,6 +117,8 @@ public:
     // no_addr class WeatherRegion & operator=(const class WeatherRegion & _a1);// public missing arg names
     // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
 };
+
+class Weather;
 
 // TODO move?
 class Season : public Ogre::GeneralAllocatedObject

@@ -2,12 +2,11 @@
 
 #include "util/lektor.h"
 #include "util/hand.h"
+#include "util/OgreUnordered.h"
 #include "Enums.h"
 
 #include <ogre/OgreVector2.h>
 #include <ogre/OgrePlaneBoundedVolume.h>
-#include <boost/unordered_map.hpp>
-#include <boost/unordered_set.hpp>
 
 namespace MyGUI
 {

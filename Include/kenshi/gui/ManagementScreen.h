@@ -71,7 +71,7 @@ public:
     void notifyEndDrop(wraps::BaseLayout* sender, wraps::DDItemInfo info, bool result);// protected RVA = 0x2D3CB0
     void notifyRemoved(int index);// protected RVA = 0x2D3200
     T1* data; // 0x118 Member
-    virtual ~ReorderableList() override;// public RVA = 0x2D47E0 vtable offset = 0x0
+    virtual ~ReorderableList();// public RVA = 0x2D47E0 vtable offset = 0x0
     // TODO destructor NV ~ReorderableList();// public RVA = 0x2D47E0 vtable offset = 0x0
     // no_addr class ReorderableList<std::deque<CraftingItem,std::allocator<CraftingItem> >,CraftingQueue::CraftItemViewData> & operator=(const class ReorderableList<std::deque<CraftingItem,std::allocator<CraftingItem> >,CraftingQueue::CraftItemViewData> & _a1);// public missing arg names
     // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names

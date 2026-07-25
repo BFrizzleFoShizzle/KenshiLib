@@ -19,6 +19,35 @@ public:
     GameData* g2; // 0x8 Member
 };
 
+class CraftingItem
+{
+public:
+    enum ErrorCode
+    {
+        CEC_NONE,
+        CEC_BENCH_LEVEL,
+        CEC_BENCH_NO_RESOURCES,
+        CEC_BENCH_NO_WORKERS
+    };
+
+    CraftingItem(const CraftingItem& c);// public RVA = 0x2CCCF0
+    CraftingItem* _CONSTRUCTOR(const CraftingItem& c);// public RVA = 0x2CCCF0
+    CraftingItem(Item* i);// public RVA = 0x2C9D40
+    CraftingItem* _CONSTRUCTOR(Item* i);// public RVA = 0x2C9D40
+    Item* item; // 0x0 Member
+    float endTime; // 0x8 Member
+    float progress01; // 0xC Member
+    hand smithBench; // 0x10 Member
+    float rate; // 0x30 Member
+    std::string name; // 0x38 Member
+    int lastErrorCode; // 0x60 Member
+    YesNoMaybe criticalSuccess; // 0x64 Member
+    ~CraftingItem();// public RVA = 0x2C9E60
+    void _DESTRUCTOR();// public RVA = 0x2C9E60
+    CraftingItem& operator=(const CraftingItem& __that);// public RVA = 0x2CD840
+    // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
+};
+
 class CraftingInventoryLayout : public BuildInventoryLayout
 {
 public:

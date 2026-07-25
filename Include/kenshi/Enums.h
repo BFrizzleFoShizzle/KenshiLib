@@ -1216,7 +1216,6 @@ enum CharacterMessage
     ATTACKING_MELEE
 };
 
-
 enum taskPriority
 {
     TP_JUST_ACTION,

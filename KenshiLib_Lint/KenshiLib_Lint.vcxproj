@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{74dfdbef-f8db-4820-bb5d-2dae21e77502}</ProjectGuid>
+    <RootNamespace>KenshiLibLint</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)../Include;$(ProjectDir)../Include/ogre;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(BOOST_INCLUDE_PATH);$(MINHOOK_PATH)/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_INCLUDE_PATH)\stage\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Include\kenshi\AI\AI.h" />
+    <ClCompile Include="..\Include\kenshi\AI\AIEventClass.h" />
+    <ClCompile Include="..\Include\kenshi\AI\AIPackage.h" />
+    <ClCompile Include="..\Include\kenshi\AI\AITaskSystem.h" />
+    <ClCompile Include="..\Include\kenshi\Animation\AnimationClass.h" />
+    <ClCompile Include="..\Include\kenshi\Animation\AnimationClassAnimal.h" />
+    <ClCompile Include="..\Include\kenshi\Animation\AnimationClassHuman.h" />
+    <ClCompile Include="..\Include\kenshi\Animation\AnimationEvent.h" />
+    <ClCompile Include="..\Include\kenshi\Animation\RagdollAnimation.h" />
+    <ClCompile Include="..\Include\kenshi\Appearance.h" />
+    <ClCompile Include="..\Include\kenshi\AppearanceManager.h" />
+    <ClCompile Include="..\Include\kenshi\Bounty.h" />
+    <ClCompile Include="..\Include\kenshi\BountyManager.h" />
+    <ClCompile Include="..\Include\kenshi\Building\Building.h" />
+    <ClCompile Include="..\Include\kenshi\Building\CraftingBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\DoorStuff.h" />
+    <ClCompile Include="..\Include\kenshi\Building\FarmBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\FurnaceBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\GatewayBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\GeneratorBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\LightBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\ProductionBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\RainCollectorBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\ResearchBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\StorageBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\TortureBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\TurretBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\Building\UseableStuff.h" />
+    <ClCompile Include="..\Include\kenshi\Building\WallBuilding.h" />
+    <ClCompile Include="..\Include\kenshi\CameraClass.h" />
+    <ClCompile Include="..\Include\kenshi\Character.h" />
+    <ClCompile Include="..\Include\kenshi\CharacterAnimal.h" />
+    <ClCompile Include="..\Include\kenshi\CharacterHuman.h" />
+    <ClCompile Include="..\Include\kenshi\CharBody.h" />
+    <ClCompile Include="..\Include\kenshi\CharMovement.h" />
+    <ClCompile Include="..\Include\kenshi\CharStats.h" />
+    <ClCompile Include="..\Include\kenshi\combat\CombatClass.h" />
+    <ClCompile Include="..\Include\kenshi\combat\CombatState.h" />
+    <ClCompile Include="..\Include\kenshi\combat\CombatTechniqueData.h" />
+    <ClCompile Include="..\Include\kenshi\combat\RangedCombatClass.h" />
+    <ClCompile Include="..\Include\kenshi\Damages.h" />
+    <ClCompile Include="..\Include\kenshi\Dialogue.h" />
+    <ClCompile Include="..\Include\kenshi\Enums.h" />
+    <ClCompile Include="..\Include\kenshi\Faction.h" />
+    <ClCompile Include="..\Include\kenshi\FactionLeader.h" />
+    <ClCompile Include="..\Include\kenshi\FactionRelations.h" />
+    <ClCompile Include="..\Include\kenshi\FactionUniqueSquadManager.h" />
+    <ClCompile Include="..\Include\kenshi\FactionWarMgr.h" />
+    <ClCompile Include="..\Include\kenshi\FitnessSelector.h" />
+    <ClCompile Include="..\Include\kenshi\FoliageSystem.h" />
+    <ClCompile Include="..\Include\kenshi\GameData.h" />
+    <ClCompile Include="..\Include\kenshi\GameDataManager.h" />
+    <ClCompile Include="..\Include\kenshi\GameLauncher.h" />
+    <ClCompile Include="..\Include\kenshi\GameplayOptions.h" />
+    <ClCompile Include="..\Include\kenshi\GameSaveState.h" />
+    <ClCompile Include="..\Include\kenshi\GameWorld.h" />
+    <ClCompile Include="..\Include\kenshi\Gear.h" />
+    <ClCompile Include="..\Include\kenshi\GlobalConstants.h" />
+    <ClCompile Include="..\Include\kenshi\Globals.h" />
+    <ClCompile Include="..\Include\kenshi\gui\BuildModeWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\CharacterEditWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\CharacterStatsWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\CharacterTradingWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\ContextMenu.h" />
+    <ClCompile Include="..\Include\kenshi\gui\DatapanelGUI.h" />
+    <ClCompile Include="..\Include\kenshi\gui\DataPanelLine.h" />
+    <ClCompile Include="..\Include\kenshi\gui\DialogueWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\FactionsScreen.h" />
+    <ClCompile Include="..\Include\kenshi\gui\FogEditor.h" />
+    <ClCompile Include="..\Include\kenshi\gui\ForgottenGUI.h" />
+    <ClCompile Include="..\Include\kenshi\gui\GameDataEditorWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\GUIWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\InteriorModeButtonWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\InventoryGUI.h" />
+    <ClCompile Include="..\Include\kenshi\gui\InventoryTraderGUI.h" />
+    <ClCompile Include="..\Include\kenshi\gui\LevelEditor.h" />
+    <ClCompile Include="..\Include\kenshi\gui\LoadingWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\LoadSaveWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\MainBarGUI.h" />
+    <ClCompile Include="..\Include\kenshi\gui\ManagementScreen.h" />
+    <ClCompile Include="..\Include\kenshi\gui\MapScreen.h" />
+    <ClCompile Include="..\Include\kenshi\gui\MessageBoxManager.h" />
+    <ClCompile Include="..\Include\kenshi\gui\MyGUI_ListScrollBar.h" />
+    <ClCompile Include="..\Include\kenshi\gui\MyGUI_MultiSlider.h" />
+    <ClCompile Include="..\Include\kenshi\gui\MyGUI_Slider.h" />
+    <ClCompile Include="..\Include\kenshi\gui\NewGameOptionsWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\NewGameWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\OpenSaveFileDialog.h" />
+    <ClCompile Include="..\Include\kenshi\gui\OptionsWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\OrdersPanel.h" />
+    <ClCompile Include="..\Include\kenshi\gui\PortraitManager.h" />
+    <ClCompile Include="..\Include\kenshi\gui\ProspectingWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\ScreenLabel.h" />
+    <ClCompile Include="..\Include\kenshi\gui\SplashScreen.h" />
+    <ClCompile Include="..\Include\kenshi\gui\SquadManagementScreen.h" />
+    <ClCompile Include="..\Include\kenshi\gui\TitleScreen.h" />
+    <ClCompile Include="..\Include\kenshi\gui\ToolTip.h" />
+    <ClCompile Include="..\Include\kenshi\gui\TransformWindow.h" />
+    <ClCompile Include="..\Include\kenshi\gui\TutorialGUI.h" />
+    <ClCompile Include="..\Include\kenshi\GunClass.h" />
+    <ClCompile Include="..\Include\kenshi\HandleManager.h" />
+    <ClCompile Include="..\Include\kenshi\Havok.h" />
+    <ClCompile Include="..\Include\kenshi\HavokCharacter.h" />
+    <ClCompile Include="..\Include\kenshi\InputHandler.h" />
+    <ClCompile Include="..\Include\kenshi\InstanceID.h" />
+    <ClCompile Include="..\Include\kenshi\Inventory.h" />
+    <ClCompile Include="..\Include\kenshi\Item.h" />
+    <ClCompile Include="..\Include\kenshi\Kenshi.h" />
+    <ClCompile Include="..\Include\kenshi\KingOfRenderThread.h" />
+    <ClCompile Include="..\Include\kenshi\LocaleInfo.h" />
+    <ClCompile Include="..\Include\kenshi\Logger.h" />
+    <ClCompile Include="..\Include\kenshi\MedianFilter.h" />
+    <ClCompile Include="..\Include\kenshi\MedicalSystem.h" />
+    <ClCompile Include="..\Include\kenshi\MeshDataLookup.h" />
+    <ClCompile Include="..\Include\kenshi\ModInfo.h" />
+    <ClCompile Include="..\Include\kenshi\NavInstance.h" />
+    <ClCompile Include="..\Include\kenshi\NavMesh.h" />
+    <ClCompile Include="..\Include\kenshi\NavMeshGenerator.h" />
+    <ClCompile Include="..\Include\kenshi\OptionsHolder.h" />
+    <ClCompile Include="..\Include\kenshi\PhysicsActual.h" />
+    <ClCompile Include="..\Include\kenshi\PhysicsCollection.h" />
+    <ClCompile Include="..\Include\kenshi\Platoon.h" />
+    <ClCompile Include="..\Include\kenshi\PlayerInterface.h" />
+    <ClCompile Include="..\Include\kenshi\RaceData.h" />
+    <ClCompile Include="..\Include\kenshi\Renderer.h" />
+    <ClCompile Include="..\Include\kenshi\RenderToTextureotron.h" />
+    <ClCompile Include="..\Include\kenshi\ResourceLoader.h" />
+    <ClCompile Include="..\Include\kenshi\RootObject.h" />
+    <ClCompile Include="..\Include\kenshi\RootObjectBase.h" />
+    <ClCompile Include="..\Include\kenshi\RootObjectFactory.h" />
+    <ClCompile Include="..\Include\kenshi\SaveFileSystem.h" />
+    <ClCompile Include="..\Include\kenshi\SaveInfo.h" />
+    <ClCompile Include="..\Include\kenshi\SaveManager.h" />
+    <ClCompile Include="..\Include\kenshi\SensoryData.h" />
+    <ClCompile Include="..\Include\kenshi\SharedKing.h" />
+    <ClCompile Include="..\Include\kenshi\ShopTrader.h" />
+    <ClCompile Include="..\Include\kenshi\ShopTraderInventory.h" />
+    <ClCompile Include="..\Include\kenshi\StateBroadcastData.h" />
+    <ClCompile Include="..\Include\kenshi\Tasker.h" />
+    <ClCompile Include="..\Include\kenshi\Terrain.h" />
+    <ClCompile Include="..\Include\kenshi\ThreadClass.h" />
+    <ClCompile Include="..\Include\kenshi\Town.h" />
+    <ClCompile Include="..\Include\kenshi\TradeCulture.h" />
+    <ClCompile Include="..\Include\kenshi\util\Array2d.h" />
+    <ClCompile Include="..\Include\kenshi\util\hand.h" />
+    <ClCompile Include="..\Include\kenshi\util\iVector2.h" />
+    <ClCompile Include="..\Include\kenshi\util\lektor.h" />
+    <ClCompile Include="..\Include\kenshi\util\OgreUnordered.h" />
+    <ClCompile Include="..\Include\kenshi\util\PerfTimer.h" />
+    <ClCompile Include="..\Include\kenshi\util\StringPair.h" />
+    <ClCompile Include="..\Include\kenshi\util\TagsClass.h" />
+    <ClCompile Include="..\Include\kenshi\util\TimeOfDay.h" />
+    <ClCompile Include="..\Include\kenshi\util\TripleInt.h" />
+    <ClCompile Include="..\Include\kenshi\util\UtilityT.h" />
+    <ClCompile Include="..\Include\kenshi\util\YesNoMaybe.h" />
+    <ClCompile Include="..\Include\kenshi\Weather.h" />
+    <ClCompile Include="..\Include\kenshi\WorldEventStateQuery.h" />
+    <ClCompile Include="..\Include\kenshi\ZoneManager.h" />
+    <ClCompile Include="..\Include\kenshi\ZoneMapContent.h" />
+    <ClCompile Include="..\Include\kenshi\ZoneSmell.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
