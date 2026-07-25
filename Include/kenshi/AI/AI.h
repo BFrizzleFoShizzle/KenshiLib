@@ -45,7 +45,6 @@ class CharBody;
 class Inventory;
 class CharStats;
 class MedicalSystem;
-class CharacterMessage;
 class TradingInfo;
 
 // TODO move?

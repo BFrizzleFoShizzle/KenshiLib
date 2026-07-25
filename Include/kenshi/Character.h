@@ -107,11 +107,6 @@ enum SoundRange
     SOUNDRANGE_ALWAYS = 0x0
 };
 
-enum CharacterMessage
-{
-    ATTACKING_MELEE
-};
-
 struct AkVector
 {
     float X; // 0x0 Member

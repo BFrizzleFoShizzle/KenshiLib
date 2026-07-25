@@ -8,17 +8,6 @@ class CharBody;
 class AI;
 
 // TODO move?
-enum taskPriority
-{
-    TP_JUST_ACTION,
-    TP_FLUFF,
-    TP_NON_URGENT,
-    TP_URGENT,
-    TP_OBEDIENCE,
-    TP_MAX_SIZE
-};
-
-// TODO move?
 class TaskStateData
 {
 public:

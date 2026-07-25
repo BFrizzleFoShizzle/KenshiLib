@@ -83,17 +83,6 @@ public:
     // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };
 
-// TODO move?
-enum taskPriority
-{
-    TP_JUST_ACTION,
-    TP_FLUFF,
-    TP_NON_URGENT,
-    TP_URGENT,
-    TP_OBEDIENCE,
-    TP_MAX_SIZE
-};
-
 class OrdersReceiver : public Ogre::GeneralAllocatedObject
 {
 public:

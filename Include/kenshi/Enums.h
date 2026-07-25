@@ -1210,3 +1210,19 @@ enum UnloadedPlatoonJob
     UPJOB_TRAVEL_TARGET,
     UPJOB_TRAVEL_TARGET_FAST
 };
+
+enum CharacterMessage
+{
+    ATTACKING_MELEE
+};
+
+
+enum taskPriority
+{
+    TP_JUST_ACTION,
+    TP_FLUFF,
+    TP_NON_URGENT,
+    TP_URGENT,
+    TP_OBEDIENCE,
+    TP_MAX_SIZE
+};
