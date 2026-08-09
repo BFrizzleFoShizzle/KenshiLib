@@ -14,7 +14,7 @@
 namespace wraps
 {
 
-	__declspec(dllimport) class BaseLayout
+	class __declspec(dllimport) BaseLayout
 	{
 	// HACK BFRIZZ make everything public because it's an internal, statically-linked class
 	public:
