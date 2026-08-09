@@ -1,3 +1,5 @@
+#pragma once
+
 #include "ProductionBuilding.h"
 
 #include <ogre/OgreMesh.h>
