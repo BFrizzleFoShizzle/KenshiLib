@@ -242,6 +242,9 @@
     <ClCompile Include="..\Include\kenshi\ZoneMapContent.h" />
     <ClCompile Include="..\Include\kenshi\ZoneSmell.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Include\kenshi\AI\Blackboard.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

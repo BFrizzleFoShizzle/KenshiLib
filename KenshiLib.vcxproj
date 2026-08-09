@@ -258,6 +258,7 @@
     <ClInclude Include="Include\kenshi\AI\AIEventClass.h" />
     <ClInclude Include="Include\kenshi\AI\AIPackage.h" />
     <ClInclude Include="Include\kenshi\AI\AITaskSystem.h" />
+    <ClInclude Include="Include\kenshi\AI\Blackboard.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClass.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClassAnimal.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClassHuman.h" />

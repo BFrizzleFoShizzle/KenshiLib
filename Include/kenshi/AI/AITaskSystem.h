@@ -173,6 +173,36 @@ public:
     // virtual void * __vecDelDtor(unsigned int _a1) = 0;// public vtable offset = 0x0 missing arg names
 };
 
+enum TaskEndEvent
+{
+    TEE_NOTHING,
+    TEE_REMOVE_MINE_ONLY,
+    TEE_REMOVE_WHOLE_SQUADS
+};
+
+class TaskRequest
+{
+public:
+    hand to; // 0x0 Member
+    hand from; // 0x20 Member
+    TaskType key; // 0x40 Member
+    hand subject; // 0x48 Member
+    taskPriority priority; // 0x68 Member
+    float weight; // 0x6C Member
+    float timeout; // 0x70 Member
+    TaskTargetType targeting; // 0x74 Member
+    int startTime; // 0x78 Member
+    int endTime; // 0x7C Member
+    TaskEndEvent endEvent; // 0x80 Member
+    bool sameAs(Tasker* t) const;// public RVA = 0x268110
+    bool operator==(const TaskRequest& t) const;// public RVA = 0x268130
+    TaskRequest(const TaskRequest& __that);// public RVA = 0x278D50
+    TaskRequest* _CONSTRUCTOR(const TaskRequest& __that);// public RVA = 0x278D50
+    TaskRequest();// public RVA = 0x268340
+    TaskRequest* _CONSTRUCTOR();// public RVA = 0x268340
+    TaskRequest& operator=(const TaskRequest& __that);// public RVA = 0x276250
+};
+
 class CharBody;
 class DatapanelGUI;
 class StateBroadcastData;

@@ -4,6 +4,7 @@
 #include <ogre/OgreVector3.h>
 #include <ogre/OgreSharedPtr.h>
 #include "util/hand.h"
+#include "util/lektor.h"
 #include "util/OgreUnordered.h"
 #include "MedianFilter.h"
 
@@ -329,7 +330,6 @@ public:
     // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
 };
 
-class Formation;
 class HavokCharacter;
 class ConstantTracerT;
 
@@ -341,6 +341,28 @@ enum MovementMode
 };
 
 class PhysicsHullT;
+
+class Formation
+{
+public:
+    // VTable         : (none)
+    // no_addr void Formation(const class Formation & _a1);// public missing arg names
+    Formation(RootObject* ownedby);// public RVA = 0x664250
+    Formation* _CONSTRUCTOR(RootObject* ownedby);// public RVA = 0x664250
+    // no_addr void cleanup();// public
+    virtual int addToFormation(const hand& h);// public RVA = 0x2AE570 vtable offset = 0x0
+    int _NV_addToFormation(const hand& h);// public RVA = 0x2AE570 vtable offset = 0x0
+    virtual void removeFromFormation(const hand& h);// public RVA = 0x2AE4E0 vtable offset = 0x8
+    void _NV_removeFromFormation(const hand& h);// public RVA = 0x2AE4E0 vtable offset = 0x8
+    virtual Ogre::Vector3 getFormationPos(int id, float tightness);// public RVA = 0x2AE130 vtable offset = 0x10
+    Ogre::Vector3 _NV_getFormationPos(int id, float tightness);// public RVA = 0x2AE130 vtable offset = 0x10
+    RootObject* character; // 0x8 Member
+    lektor<hand> followers; // 0x10 Member
+    ~Formation();// public RVA = 0x664130
+    void _DESTRUCTOR();// public RVA = 0x664130
+    // no_addr class Formation & operator=(const class Formation & _a1);// public missing arg names
+    // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
+};
 
 class CharMovement : public AbstractMovementBase
 {
