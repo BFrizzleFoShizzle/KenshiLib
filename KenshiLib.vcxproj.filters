@@ -2609,6 +2609,12 @@
     <ClInclude Include="Include\kenshi\AI\Blackboard.h">
       <Filter>Header Files\kenshi\AI</Filter>
     </ClInclude>
+    <ClInclude Include="Include\kenshi\Campaign.h">
+      <Filter>Header Files\kenshi</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kenshi\AI\Contract.h">
+      <Filter>Header Files\kenshi\AI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="Libraries\ogre\OgreMain_x64.lib">

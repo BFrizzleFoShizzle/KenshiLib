@@ -245,6 +245,12 @@
   <ItemGroup>
     <ClCompile Include="..\Include\kenshi\AI\Blackboard.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Include\kenshi\Campaign.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Include\kenshi\AI\Contract.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

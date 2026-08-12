@@ -266,6 +266,7 @@ lib.exe /OUT:"$(OutDir)$(TargetName).lib" "$(OutDir)$(TargetName)_export.lib" "$
     <ClInclude Include="Include\kenshi\AI\AIPackage.h" />
     <ClInclude Include="Include\kenshi\AI\AITaskSystem.h" />
     <ClInclude Include="Include\kenshi\AI\Blackboard.h" />
+    <ClInclude Include="Include\kenshi\AI\Contract.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClass.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClassAnimal.h" />
     <ClInclude Include="Include\kenshi\Animation\AnimationClassHuman.h" />
@@ -292,6 +293,7 @@ lib.exe /OUT:"$(OutDir)$(TargetName).lib" "$(OutDir)$(TargetName)_export.lib" "$
     <ClInclude Include="Include\kenshi\Building\UseableStuff.h" />
     <ClInclude Include="Include\kenshi\Building\WallBuilding.h" />
     <ClInclude Include="Include\kenshi\CameraClass.h" />
+    <ClInclude Include="Include\kenshi\Campaign.h" />
     <ClInclude Include="Include\kenshi\Character.h" />
     <ClInclude Include="Include\kenshi\CharacterAnimal.h" />
     <ClInclude Include="Include\kenshi\CharacterHuman.h" />

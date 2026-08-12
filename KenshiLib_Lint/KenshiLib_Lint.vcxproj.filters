@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Include\kenshi\AI\AI.h">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Include\kenshi\AI\AIEventClass.h">
       <Filter>Header Files</Filter>
     </ClCompile>
@@ -495,8 +492,17 @@
     <ClCompile Include="..\Include\kenshi\ZoneSmell.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Include\kenshi\AI\AI.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\Include\kenshi\AI\Blackboard.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\kenshi\Campaign.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\kenshi\AI\Contract.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
