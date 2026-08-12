@@ -83,6 +83,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Shlwapi.lib;libMinHook.x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>move /Y "$(OutDir)$(TargetName).lib" "$(OutDir)$(TargetName)_export.lib"
+lib.exe /OUT:"$(OutDir)$(TargetName).lib" "$(OutDir)$(TargetName)_export.lib" "$(IntDir)Source\core\Functions_static.obj"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="Include\kenshi\util\iVector2.h" />
@@ -240,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\core\Functions.cpp" />
+    <ClCompile Include="Source\core\Functions_static.cpp">
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</WholeProgramOptimization>
+    </ClCompile>
     <ClCompile Include="Source\core\md5.cpp" />
     <ClCompile Include="Source\core\RVA.cpp" />
     <ClCompile Include="Source\core\Scanner.cpp" />

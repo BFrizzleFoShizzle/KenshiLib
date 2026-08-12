@@ -78,6 +78,9 @@
     <ClCompile Include="Source\core\Functions.cpp">
       <Filter>Source Files\kenshi</Filter>
     </ClCompile>
+    <ClCompile Include="Source\core\Functions_static.cpp">
+      <Filter>Source Files\kenshi</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\ogre\math\array\neon\single\neon_mathfun.h">

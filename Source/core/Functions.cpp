@@ -99,6 +99,35 @@ KenshiLib::HookStatus KenshiLib::AddHook(void* target, void* detour, void** orig
     return SUCCESS; 
 }
 
+// queue hook to be added
+KLIB_EXPORT KenshiLib::HookStatus QueueHookInternal(size_t ID, void* target, void* detour, void** original)
+{
+    MH_STATUS status = MH_CreateHookEx(ID, target, detour, original);
+    if (status != MH_OK)
+    {
+        ErrorLog("Error creating hook: " + std::to_string((int64_t)status));
+        return KenshiLib::FAIL;
+    }
+    status = MH_QueueEnableHookEx(ID, target);
+    if (status != MH_OK)
+    {
+        ErrorLog("Error queueing hook: " + std::to_string((int64_t)status));
+        return KenshiLib::FAIL;
+    }
+}
+
+// queue hook to be added
+KLIB_EXPORT KenshiLib::HookStatus ApplyQueuedHooksInternal(size_t ID)
+{
+    MH_STATUS status = MH_ApplyQueuedEx(ID);
+    if (status != MH_OK)
+    {
+        ErrorLog("Error applying queued hook: " + std::to_string((int64_t)status));
+        return KenshiLib::FAIL;
+    }
+    return KenshiLib::SUCCESS;
+} 
+
 // NOTE: doesn't work with virtual functions
 static inline uintptr_t GetFunctionSlot(void* ptr)
 {

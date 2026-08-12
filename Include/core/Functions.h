@@ -30,7 +30,12 @@ namespace KenshiLib
 		FAIL
 	};
 
+	// immediately add hook (high overhead)
 	KLIB_EXPORT HookStatus AddHook(void* target, void* detour, void** original);
+	// queue hook to be added (note: each module has it's own global queue)
+	HookStatus QueueHook(void* target, void* detour, void** original);
+	// flushes the hook queue for our module
+	HookStatus ApplyQueuedHooks();
 
 	// convenience functions
 	template<typename T>
@@ -42,6 +47,16 @@ namespace KenshiLib
 	inline HookStatus AddHook(T1* target, void* detour, T2** original)
 	{
 		return AddHook((void*)target, detour, (void**)original);
+	}
+	template<typename T>
+	inline HookStatus QueueHook(intptr_t target, void* detour, T** original)
+	{
+		return QueueHook((void*)target, detour, (void**)original);
+	}
+	template<typename T1, typename T2>
+	inline HookStatus QueueHook(T1* target, void* detour, T2** original)
+	{
+		return QueueHook((void*)target, detour, (void**)original);
 	}
 
 	// *********** DO NOT USE ***********
