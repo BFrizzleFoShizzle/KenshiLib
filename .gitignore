@@ -4,6 +4,9 @@ build/
 proj/
 .vscode/
 
+# Locally downloaded build dependencies
+Dependencies/
+
 # MacOS Cache
 .DS_Store
 

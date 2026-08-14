@@ -20,6 +20,26 @@ DON'T use 3rd-party function hooking/detouring libraries as these can cause issu
 DON'T access the UI from non-UI threads. Most MyGUI functions are NOT thread-safe, this will cause race conditions that will intermittently crash the game.  
 If you are exporting functions for other plugins to use, it is wise to make your plugin a Preload Plugin (doccumentation coming) so that it is loaded before other plugins.
 
+### Type-safe hooks
+
+Pass the Kenshi function directly to `AddHook` or `QueueHook` to have the compiler verify the target, detour, and original function pointer signatures. Member function detours receive the object as their first argument:
+
+```cpp
+bool (*checkConditionsOriginal)(DialogLineData*, Dialogue*, Character*, bool) = NULL;
+
+bool checkConditionsHook(DialogLineData* self, Dialogue* dialogue, Character* target, bool isWordswap)
+{
+    return checkConditionsOriginal(self, dialogue, target, isWordswap);
+}
+
+KenshiLib::AddHook(
+    &DialogLineData::checkConditions,
+    &checkConditionsHook,
+    &checkConditionsOriginal);
+```
+
+The older address-based form using `GetRealAddress` remains available for backwards compatibility and unusual hooks, but it cannot verify the target signature.
+
 ## Compiling
 
 Requires Visual Studio 2019 or newer and the Visual C++ 2010 x64 compilers. KenshiLib MUST be compiled using the Visual Studio 2010 compiler. Copies of Visual Studio 2010 can be found on the [Wayback Machine](https://archive.org/search?query=visual+studio+2010).

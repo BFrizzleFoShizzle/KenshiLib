@@ -81,6 +81,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HookTypes.cpp" />
     <ClCompile Include="..\Include\kenshi\AI\AI.h" />
     <ClCompile Include="..\Include\kenshi\AI\AIEventClass.h" />
     <ClCompile Include="..\Include\kenshi\AI\AIPackage.h" />

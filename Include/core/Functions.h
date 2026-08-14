@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Defines.h>
+#include <core/HookTraits.h>
 #include <stdint.h>
 
 namespace KenshiLib
@@ -38,6 +39,24 @@ namespace KenshiLib
 	HookStatus ApplyQueuedHooks();
 
 	// convenience functions
+	//
+	// Passing a Kenshi function directly selects these overloads. HookTraits
+	// requires the detour and original pointer to exactly match the target's
+	// return type and arguments (with an explicit first `this` argument for
+	// member functions). Type erasure only happens after that compile-time check.
+	template<typename Target>
+	inline HookStatus AddHook(Target target, typename HookTraits<Target>::Function detour, typename HookTraits<Target>::Function* original)
+	{
+		return AddHook((void*)GetRealAddress(target), (void*)detour, (void**)original);
+	}
+	template<typename Target>
+	inline HookStatus QueueHook(Target target, typename HookTraits<Target>::Function detour, typename HookTraits<Target>::Function* original)
+	{
+		return QueueHook((void*)GetRealAddress(target), (void*)detour, (void**)original);
+	}
+
+	// Backwards-compatible address-based overloads. Prefer passing the Kenshi
+	// function directly so the target signature can also be checked.
 	template<typename T>
 	inline HookStatus AddHook(intptr_t target, void* detour, T** original)
 	{

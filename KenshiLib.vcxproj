@@ -255,6 +255,7 @@ lib.exe /OUT:"$(OutDir)$(TargetName).lib" "$(OutDir)$(TargetName)_export.lib" "$
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\core\Functions.h" />
+    <ClInclude Include="Include\core\HookTraits.h" />
     <ClInclude Include="Include\core\md5.h" />
     <ClInclude Include="Include\core\md5_loc.h" />
     <ClInclude Include="Include\core\RVA.h" />
