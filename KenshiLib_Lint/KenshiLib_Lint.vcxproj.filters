@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HookTypes.cpp">
+    <ClCompile Include="TypeSafeHooksCompileTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Include\kenshi\AI\AIEventClass.h">
