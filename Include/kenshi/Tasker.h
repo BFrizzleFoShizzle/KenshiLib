@@ -21,8 +21,6 @@ public:
     bool progressionOnly; // 0x5 Member
 };
 
-class function;
-
 // TODO move?
 enum PermajobType
 {
@@ -37,8 +35,8 @@ class TaskData : public Ogre::GeneralAllocatedObject
 public:
     // Ogre::AllocatedObject<Ogre::CategorisedAllocPolicy<0> > offset = 0x0, length = 0x1
     // no_addr void TaskData(const class TaskData & _a1);// public missing arg names
-    TaskData(TaskType namekey, function* scoreFunc, bool actionFunc, bool _needTarget);// private RVA = 0x61CBD0
-    TaskData* _CONSTRUCTOR(TaskType namekey, function* scoreFunc, bool actionFunc, bool _needTarget);// private RVA = 0x61CBD0
+    TaskData(TaskType namekey, float (AI::* scoreFunc)(const hand&, const Ogre::Vector3&), bool actionFunc, bool _needTarget);// private RVA = 0x61CBD0
+    TaskData* _CONSTRUCTOR(TaskType namekey, float (AI::* scoreFunc)(const hand&, const Ogre::Vector3&), bool actionFunc, bool _needTarget);// private RVA = 0x61CBD0
     void addResult(StateType s, bool val, bool progressional);// private RVA = 0x60DF90
     void addRequirement(StateType s, bool val, bool progressional);// private RVA = 0x60E1C0
     void setCharacteristics(float _aid, float _aggressionLevel, float noise, bool leadsSomewhere);// private RVA = 0x317610
@@ -87,14 +85,14 @@ public:
     // no_addr bool fulfillsResult(enum StateType _a1);// public missing arg names
     int numRequirements; // 0xA8 Member
     TaskStateData requirements[0xB]; // 0xAC Member
-    function* scoreFunction; // 0x108 Member
+    float (AI::* scoreFunction)(const hand&, const Ogre::Vector3&); // 0x108 Member
     // no_addr bool isJob();// public
     bool isResultsComplete(AI* ai, const hand& target, const hand& subTarget, const Ogre::Vector3& location);// public RVA = 0x60EDF0
     bool isResultsComplete_ignoreSubtasker(AI* ai, const hand& target, const hand& subTarget, const Ogre::Vector3& location);// public RVA = 0x60E940
     void getRequirementComplaint(std::string& out, AI* ai, const hand& target, const Ogre::Vector3& location, const hand& subTarget, bool autoTargetFinder);// public RVA = 0x60F8A0
     bool _isRequirementsComplete(AI* ai, const hand& target, const Ogre::Vector3& location, hand& subTarget, bool autoTargetFinder, StateType& failedOn);// public RVA = 0x60F1C0
     bool isRequirementComplete(AI* ai, const hand& obj, int req, const Ogre::Vector3& location);// public RVA = 0x60E040
-    void setTargetingFunction(function* finder, bool justNeedOne);// public RVA = 0x3176D0
+    void setTargetingFunction(float (AI::* finder)(const hand&, hand&, bool), bool justNeedOne);// public RVA = 0x3176D0
     bool justDoOneTarget; // 0x120 Member
     bool isTargetFinder() const;// public RVA = 0x50B9E0
     void setSubTask(StateType state, bool required);// public RVA = 0x60DFC0
@@ -105,7 +103,7 @@ public:
     std::string description; // 0x138 Member
     float runTargetFind(AI* ai, const hand& _target, hand& out, bool justAsking);// public RVA = 0x60ECE0
     bool _targetsRemaining(AI* ai, const hand& _target);// public RVA = 0x50B9F0
-    function* _findTarget; // 0x160 Member
+    float (AI::* _findTarget)(const hand&, hand&, bool); // 0x160 Member
     // no_addr void ~TaskData();// public
     // no_addr class TaskData & operator=(const class TaskData & _a1);// public missing arg names
     // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names

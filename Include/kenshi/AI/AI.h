@@ -3,14 +3,13 @@
 #include "../SensoryData.h"
 
 class AITaskSytem;
-class function;
 class AI;
 
 // TODO move?
 class StateFunctionList
 {
 public:
-    void add(StateType key, function* f);// public RVA = 0x61F450
+    void add(StateType key, bool (AI::*f)(const hand&, const Ogre::Vector3&));// public RVA = 0x61F450
     bool isTrue(AI* ai, StateType key, const hand& h, const Ogre::Vector3& v, bool desired);// public RVA = 0x61F490
     bool hasState(StateType key);// public RVA = 0x61F520
     boost::unordered::unordered_map<StateType, bool(__cdecl AI::*)(hand const&, Ogre::Vector3 const&), boost::hash<StateType>, std::equal_to<StateType>, Ogre::STLAllocator<std::pair<StateType const, bool(__cdecl AI::*)(hand const&, Ogre::Vector3 const&)>, Ogre::GeneralAllocPolicy > > stateFuncs; // 0x0 Member
@@ -129,7 +128,7 @@ public:
         void cacheResult_results(const TaskMatch& key, bool b);// public RVA = 0x61F5B0
         bool getCacheResult_results(const TaskMatch& key);// public RVA = 0x61F5E0
         bool hasCacheResult_results(const TaskMatch& key) const;// public RVA = 0x61DB40
-        float runTargetFinder(function* func, const TaskMatch& key, hand& out);// public RVA = 0x60EA50
+        float runTargetFinder(float (AI::* func)(const hand&, hand&, bool), const TaskMatch& key, hand& out);// public RVA = 0x60EA50
         void resetSpecificTargetFinderCache(const TaskMatch& key);// public RVA = 0x518FA0
         float getResourceSource(hand& buildingFound, GameData* resourceNeeded, StorageBuilding* skip);// public RVA = 0x59C880
         void cacheResult_targetFinder(TaskMatch key, const hand& sub, float score);// private RVA = 0x61F600
@@ -143,7 +142,7 @@ public:
         // no_addr void * __vecDelDtor(unsigned int _a1);// public missing arg names
     };
     AI::AIResultsCacher resultsCache; // 0x208 Member
-    static void setFunc(StateType t, function* func, const std::string& name, const std::string& speech);// public RVA = 0x60F9F0
+    static void setFunc(StateType t, bool (AI::*func)(const hand&, const Ogre::Vector3&), const std::string& name, const std::string& speech);// public RVA = 0x60F9F0
     static void _setupGOAPFuncs();// public RVA = 0x60FAD0
     TaskRepertoire* taskRepertoire; // 0x2A8 Member
     void setTaskRepertoireFlag(unsigned int flag);// public RVA = 0x60E0C0

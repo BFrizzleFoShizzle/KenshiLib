@@ -85,7 +85,6 @@ enum ZoneActivationType
 };
 
 class SpacialCell;
-class function;
 
 class ZoneSpacialGrid
 {
@@ -120,7 +119,7 @@ public:
     unsigned int getCellKey(ZoneMap* zone, const Ogre::Vector3& p) const;// private RVA = 0x9F9940
     unsigned int getFullKey(const Ogre::Vector3& p) const;// private RVA = 0x9F9A20
     void initialiseGrid(float size);// private RVA = 0x9F7E40
-    function* createCellsFunc; // 0x8 Member
+    SpacialCell** (*createCellsFunc)(int); // 0x8 Member
     int cellCount; // 0x10 Member
     float cellSize; // 0x14 Member
     boost::shared_mutex mutex; // 0x18 Member

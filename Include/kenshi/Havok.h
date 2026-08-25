@@ -415,7 +415,6 @@ struct hkResult
     hkResultEnum m_enum; // 0x0 Member
 };
 
-class function;
 class hkMemorySnapshot;
 
 class hkMemoryAllocator
@@ -452,7 +451,7 @@ public:
         virtual hkResult setMemorySoftLimit(unsigned __int64 _a1) = 0;// public vtable offset = 0x18 missing arg names
         virtual unsigned __int64 getMemorySoftLimit() = 0;// public vtable offset = 0x20
         virtual bool canAllocTotal(int _a1) = 0;// public vtable offset = 0x28 missing arg names
-        virtual hkResult walkMemory(function* _a1, void* _a2) = 0;// public vtable offset = 0x30 missing arg names
+        virtual hkResult walkMemory(void (*_a1)(void*, unsigned __int64, bool, int, void*), void* _a2) = 0;// public vtable offset = 0x30 missing arg names
         virtual unsigned __int64 getApproxTotalAllocated() = 0;// public vtable offset = 0x38
         virtual void setScrubValues(unsigned int _a1, unsigned int _a2) = 0;// public vtable offset = 0x40 missing arg names
         virtual int addToSnapshot(hkMemorySnapshot& _a1, int _a2) = 0;// public vtable offset = 0x48 missing arg names

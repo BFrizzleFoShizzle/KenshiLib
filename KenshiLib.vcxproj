@@ -121,6 +121,7 @@ lib.exe /OUT:"$(OutDir)$(TargetName).lib" "$(OutDir)$(TargetName)_export.lib" "$
     <None Include="Include\ogre\OgreMovableObject.inl" />
     <None Include="Libraries\ogre\OgreMain_x64.def" />
     <None Include="Source\kenshi\functions\AbstractMovementBase.inc" />
+    <None Include="Source\kenshi\functions\AI_AIResultsCacher.inc" />
     <None Include="Source\kenshi\functions\Armour.inc" />
     <None Include="Source\kenshi\functions\Bounty.inc" />
     <None Include="Source\kenshi\functions\BountyManager.inc" />

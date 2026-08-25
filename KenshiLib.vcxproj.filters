@@ -3081,6 +3081,9 @@
     <None Include="Source\kenshi\functions\RenderToTextureotron.inc">
       <Filter>Source Files\kenshi\functions</Filter>
     </None>
+    <None Include="Source\kenshi\functions\AI_AIResultsCacher.inc">
+      <Filter>Source Files\kenshi\functions</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="Source\kenshi\symbols.asm">

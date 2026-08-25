@@ -18,7 +18,6 @@ class DataPanelLine_Slider;
 class DataPanelLine_Progress;
 class DataPanelLine_CheckBox;
 class DataPanelLine_DropBox;
-class function;
 
 class DatapanelGUI : public GUIWindow
 {
@@ -103,8 +102,8 @@ public:
     void _NV_setObject(const hand& obj);// public RVA = 0x6F9580 vtable offset = 0xD8
     virtual void setLineSpacing(float numLinesPerScreen);// public RVA = 0x6F5030 vtable offset = 0xE0
     void _NV_setLineSpacing(float numLinesPerScreen);// public RVA = 0x6F5030 vtable offset = 0xE0
-    virtual void setMouseOverCallback(function* evt, void* datas);// public RVA = 0x6F50C0 vtable offset = 0xE8
-    void _NV_setMouseOverCallback(function* evt, void* datas);// public RVA = 0x6F50C0 vtable offset = 0xE8
+    virtual void setMouseOverCallback(void (*evt)(std::string, void*), void* datas);// public RVA = 0x6F50C0 vtable offset = 0xE8
+    void _NV_setMouseOverCallback(void (*evt)(std::string, void*), void* datas);// public RVA = 0x6F50C0 vtable offset = 0xE8
     virtual DataPanelLine* getLine(const std::string& key, int cat);// public RVA = 0x6FC000 vtable offset = 0xF0
     DataPanelLine* _NV_getLine(const std::string& key, int cat);// public RVA = 0x6FC000 vtable offset = 0xF0
     bool lineExists(const std::string& key, int cat);// public RVA = 0x6FC100
@@ -137,7 +136,7 @@ public:
     int currentCategory; // 0xB0 Member
     bool dataExists(int cat, const std::string& name);// protected RVA = 0x6F5220
     // no_addr void _hideWidgets();// protected
-    function* mouseOverEvent; // 0xB8 Member
+    void (*mouseOverEvent)(std::string, void*); // 0xB8 Member
     void* mouseOverEventDatas; // 0xC0 Member
     bool automaticRefresh; // 0xC8 Member
     bool automaticTarget; // 0xC9 Member
