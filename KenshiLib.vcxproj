@@ -316,6 +316,7 @@ lib.exe /OUT:"$(OutDir)$(TargetName).lib" "$(OutDir)$(TargetName)_export.lib" "$
     <ClInclude Include="Include\kenshi\FitnessSelector.h" />
     <ClInclude Include="Include\kenshi\FoliageSystem.h" />
     <ClInclude Include="Include\kenshi\GameData.h" />
+    <ClInclude Include="Include\kenshi\GameDataGroup.h" />
     <ClInclude Include="Include\kenshi\GameDataManager.h" />
     <ClInclude Include="Include\kenshi\GameplayOptions.h" />
     <ClInclude Include="Include\kenshi\GameSaveState.h" />
@@ -391,6 +392,7 @@ lib.exe /OUT:"$(OutDir)$(TargetName).lib" "$(OutDir)$(TargetName)_export.lib" "$
     <ClInclude Include="Include\kenshi\RaceData.h" />
     <ClInclude Include="Include\kenshi\Renderer.h" />
     <ClInclude Include="Include\kenshi\RenderToTextureotron.h" />
+    <ClInclude Include="Include\kenshi\Research.h" />
     <ClInclude Include="Include\kenshi\ResourceLoader.h" />
     <ClInclude Include="Include\kenshi\RootObject.h" />
     <ClInclude Include="Include\kenshi\RootObjectBase.h" />
