@@ -32,7 +32,7 @@ namespace KenshiLib
 
 	// immediately add hook (high overhead)
 	KLIB_EXPORT HookStatus AddHook(void* target, void* detour, void** original);
-	// queue hook to be added (note: each module has it's own global queue)
+	// queue hook to be added (note: each module/DLL has it's own global queue)
 	HookStatus QueueHook(void* target, void* detour, void** original);
 	// flushes the hook queue for our module
 	HookStatus ApplyQueuedHooks();
