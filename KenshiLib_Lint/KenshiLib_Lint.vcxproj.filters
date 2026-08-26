@@ -504,5 +504,11 @@
     <ClCompile Include="..\Include\kenshi\AI\Contract.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Include\kenshi\GameDataGroup.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\kenshi\Research.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
