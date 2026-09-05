@@ -255,6 +255,10 @@
     <ClCompile Include="..\Include\kenshi\GameDataGroup.h" />
     <ClCompile Include="..\Include\kenshi\Research.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Include\kenshi\AI\TaskPathfinder.h" />
+    <ClCompile Include="..\Include\kenshi\AI\TaskRepertoire.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
